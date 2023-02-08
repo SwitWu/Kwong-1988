@@ -1,0 +1,64 @@
+\section{Main Result, \boldmath{$a\geq 0$}}\label{sec:5}
+
+The fact that there is a critical exponent for boundary value problems on finite 
+intervals $[0, b]$ is a reminder of the presence of the singular term 
+$m u^{\prime}/r$ in the differential equation. The singularity is, however,
+more benign than it first appears. For any fixed $m$, the solution $u$ still 
+depends continuously on the parameters $\alpha$, at least in any compact subinterval 
+of $[0, b)$. From now on we fixed an $m$ that is less than the critical exponent,
+so we no longer think of $u$ as depending on $m$.
+Instead, we affix the initial point $a$, at which (3.5) is imposed,
+to the parameter list. Now $u=u(r, \alpha, a)$ is continuous in $a$
+at each fixed point on the $r$-axis except the origin.
+
+Instead of considering the $(\alpha, m)$ plane as before,
+we now have the $(\alpha, a)$ quadrant $(0, \infty) \times[0, \infty)$.
+We define the same sets $N, G$, and $P$ as before but with $a$ in place of $m$.
+The two sets $N$ and $P$ are still open. Since for each $a>0$,
+uniqueness holds for all the boundary value problems in question,
+each vertical line through an $a>0$ contains exactly one point $(\alpha(a), a)$ in $G$. 
+The function $\alpha(a)$ gives a continuous curve that must converge to a single limit 
+point $\alpha(0)$ on the line $a=0$. All the lemmas on admissibility and normality 
+holds with $m$ replaced by $a$. Thus all the arguments in the last section can be 
+repeated. In particular, the point $\alpha(0)$ is normal since it is the limit point of 
+the curve $\alpha(a)$, which consists of normal points.
+The half line $(\alpha(0), \infty)$ coincides with $N$. 
+We must verify that the other half line $(0, \alpha(0))$ cannot contain members of $G$. 
+That is done by use of lemmas analogous to Lemmas 31 through 35 .
+
+We summarize our results in one main theorem.
+
+\begin{theorem}
+  Under any one of the following conditions:
+  \begin{enumerate}
+    \item $a>0, m \geq 0, \quad p>1, a<b \leq \infty$,
+    \item $a=0,0 \leq m \leq 1, p>1, \quad 0<b \leq \infty$,
+    \item $a=0, m>1,1<p<\frac{m+3}{m-1}, 0<b \leq \infty$,
+  \end{enumerate}
+  here is exactly one positive solution to the boundary value problem
+  \begin{equation}\label{eq:5.1}
+    u^{\prime \prime}(r)+\frac{m}{r} u^{\prime}(r)+u^p-u =0, \quad u(r)>0, \quad r \in(a, b)  
+  \end{equation}
+  
+  \begin{equation}\label{eq:5.2}
+    u'(a) = 0,
+  \end{equation}
+
+  \begin{equation}\label{eq:5.3}
+    u(b) = 0
+  \end{equation}
+  or
+  \begin{equation}\label{eq:5.4}
+    \lim _{r \rightarrow \infty} u(x)=0 \quad \text { if } b=\infty.
+  \end{equation}
+
+  For a fixed endpoint $a, \alpha=u(a)$, the value of the solution at a, is a strictly decreasing function of the other endpoint $b$. Let $\alpha_0$ be the initial height of the solution of the boundary value problem when $b=\infty$. No solutions with initial height below $\alpha_0$ can intersect the $r$-axis.
+
+  Equivalently, under one of the three conditions listed above, there exists a unique positive radially symmetric solution of the reaction-diffusion equation
+  \begin{equation}\label{eq:5.5}
+    \Delta u+u^p-u=0, \quad a<|x|<b,    
+  \end{equation}
+  with the Neumann boundary condition at $|x|=a$ if $a \neq 0$, and the Dirichlet boundary condition at $|x|=b \quad($ or $u(x) \rightarrow \infty$ as $|x| \rightarrow \infty$ if $b=\infty)$.
+\end{theorem}
+
+Although we have made no attempt to seek the most general nonlinearity that our method can handle, it is obvious that the concavity of the function $u^p-u$ plays a crucial part. It is interesting to see if that alone is sufficient.

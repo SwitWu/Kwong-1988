@@ -1,0 +1,93 @@
+\section{Introduction}
+
+The interesting semilinear elliptic differential equation
+\begin{equation}
+  \Delta u + f(u) = 0, \quad x\in \mathbb{R}^n,
+\end{equation}
+arises in many areas of applied mathematics including astrophysics,
+fluid mechanics, and population genetics.
+If a solution exists in the whole space $\mathbb{R}^n$, satisfying
+\begin{equation}
+  u(x) \to 0 \quad \text{as} \quad |x| \to \infty,
+\end{equation}
+it is called a ground state.
+One natural question to ask is whether the ground state is unique or not.
+This is an extremely difficult problem to tackle in general.
+The classical work of \textsc{Gidas}, \textsc{Ni}, \& \textsc{Nirenberg}
+[4, 5] tells us that with some mild conditions on $f$, all ground states are
+radially symmetric. This allows us to shift our study to the ordinary differential equation
+\begin{equation}
+  u'' + \frac{n-1}{r} u' + f(u) = 0,\quad r>0
+\end{equation}
+
+\begin{equation}
+  u'(0) = 0,\quad u(r)\to 0\quad \text{as} \quad r\to\infty.
+\end{equation}
+
+Still this is a sufficiently difficult problem that few general results are known.
+One exception is the recent result of \textsc{Peletier} \& \textsc{Serrin} [13],
+which provides uniqueness for those $f$ that satisfy a starlike condition for large $u$
+and are essentially more negative than positive for small $u$.
+See also [6] for an improvement on this result.
+
+\textsc{Coffman} [3] established uniqueness for the ground state of the equation
+with particular choice of $n=3$ and
+\begin{equation}
+  f = u^3 - u.
+\end{equation}
+The result for the problem on the whole of $\mathbb{R}^n$ is deduced from that
+of the corresponding problem on a finite interval $[0,b]$.
+The main part of the proof is a study of the zeros of the function
+\begin{equation}
+  w(x) = \frac{\partial u(x)}{\partial \alpha},
+\end{equation}
+where $u$ is considered as a function of both $r$ and the parameter $\alpha=u(0)$.
+Very clever identities are used to show that $w(x)$ changes sign exactly once in $[0,b]$.
+The required conclusion then follows.
+\textsc{Coffman} attributed the approach, especially the use of special identities,
+to \textsc{Kolodner} [8]. \textsc{Kolodner} was concerned with a more general 
+nonlinear eigenvalue problem (rather than just the uniqueness of the ground state)
+for some sublinear eigenvalue equation arising from the study of the rotation of a heavy string.
+\textsc{Coffman} remarked that the proof he gave in [3] did not extend to other
+choices of $n$ or other powers of $u$ in $f$ since some of the clever identities
+no longer hold.
+
+When $f$ takes the more general from
+\begin{equation}\label{eq:1.7}
+  f = u^p - u,\quad p>1,
+\end{equation}
+there is the added complication of the non-existence of solutions if $p$ exceeds
+or is equal to the critical value $(n+2)/(n-2)$; see, for instance, [1, 2].
+
+Improving on \textsc{Coffman}'s method, \textsc{Mcleod} \& \textsc{Serrin} [10]
+were able to establish a rather general result that includes \textsc{Coffman}'s.
+In particular, for the special $f$ above, uniqueness holds for
+\begin{alignat*}{2}
+  & p<\infty & \quad & (1\leq n\leq 2), \\
+  & p \leq \frac{n}{n-2} && (2<n\leq 4), \\
+  & p<\frac{8}{n} && (4<n<8).
+\end{alignat*}
+Slightly sharper reaults are also available for $p$ close to $1$.
+
+In this paper the expected result for all values of $p$ up to the critical exponent
+is confirmed. In addition, we also study the ground state solutions for a ball,
+an annulus, and the exterior of a ball.
+In the cases when the origin is not included, uniqueness is established for all $p>0$.
+
+The approach used in this paper is basically the same as that of \textsc{Coffman}.
+Instead of using \textsc{Kolodner}-type identities we resort to \textsc{Sturm} comparison
+techniques in the oscillation theory of the linear second-order differential equations.
+The two methods are essentially equivalent, but the latter seems to make the proofs
+more transparent. In the present case, the main difficulty lies in the choice of the
+suitable comparison equation and in the proof that the equation has the correct
+oscillation behavior. See the survey paper [9] for a more detailed explanation
+of our modification of \textsc{Coffman}'s method and its use to obtain
+earlier uniqueness results.
+
+For some recent success of \textsc{Sturm}'s comparison technique in the study
+of another property of the Emden-Flower equation, see [7].
+
+In the spirit of \textsc{Coffman}'s paper, the result is presented only for the
+particular choice of $f$ given by \eqref{eq:1.7}.
+We refrain from stating the theorem for more general $f$
+(although it appears not hard to do so), in order to keep the ideas of the proof clear.

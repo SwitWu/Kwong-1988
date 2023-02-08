@@ -1,0 +1,274 @@
+\section{Classification of Solutions}\label{sec:3}
+
+In this section and the next, we study our differential equation in an interval 
+not containing the origin, in order to avoid having a singular term in the equation.
+Let $p>1$ and $m \geq 0$ be any constants, and $(a, b)$ be a bounded or unbounded 
+open subinterval of $[0, \infty)$, with $a>0$. We are concerned with the following
+boundary value problems:
+
+\begin{align}
+  u^{\prime \prime}(r)+\frac{m}{r} u^{\prime}(r)+u^p-u & =0, \quad u(r)>0,
+    \quad r \in(a, b), \label{eq:3.1} \\
+  u^{\prime}(a) & = 0, \label{eq:3.2} \\
+  u(b) & = 0
+\end{align}
+
+or
+
+\begin{equation}\label{eq:3.4}
+  \lim _{r \rightarrow \infty} u(x)=0 \quad \text { if } b=\infty .
+\end{equation}
+
+These come from corresponding boundary value problems for the semilinear equation 
+(1.1) on an annulus $a<|x|<b$, with the Neumann condition on the ball $|x|=a$ and 
+the Dirichlet condition on the outer ball $|x|=b$. The constant $m$ is one less 
+than the dimension $n$ of the Euclidean space $\mathbb{R}^n$ in which (1.1) holds.
+In this section, we take $m$ to be any positive constant, not necessarily integral.
+Our main theorem asserts the uniqueness of the solution to any of the above boundary
+value problems. Since the question of existence has been answered in the affirmative,
+a unique solution always exists.
+
+In this section we discuss the classification of solutions of (3.1). 
+Some of the lemmas stated here are well known, but we prefer to give complete proofs.
+The proof of the main theorem is complicated enough that it is perhaps better to make
+the paper as self-contained as possible. Trying to adopt notations from other sources
+would only add to the confusion.
+
+Following \textsc{Kolodner} and \textsc{Coffman}, instead of considering directly the
+boundary value problems, we look at $u$ as the solution of an initial value problem, 
+(3.1), together with the initial conditions
+\begin{equation}\label{eq:3.5}
+  u(a)=\alpha>0, \quad u^{\prime}(a)=0.
+\end{equation}
+The solution $u$ now depends on $\alpha$ as a parameter.
+In addition, $u$ depends on the constant $m$. Besides, 
+we think of $u=u(r, \alpha, m)$ as defined for all values of $r>0$ 
+extending beyond the interval $[a, b]$.
+
+In other words, we are shooting out a solution $u(r, \alpha, m)$ from the point $r=a$
+and hope that with the correct choice of the initial height $\alpha$,
+the solution will land on the right spot $r=b$.
+Rather than regarding $b$ to be a preassigned fixed point,
+we let $b(\alpha, m)$ be the first point where $u(r, \alpha, m)$ intersects the
+$r$-axis, and study the dependence of $b$ on $\alpha$ and $m$.
+The point $b$ is not always defined. This happens, for instance, 
+if for a fixed $m, \alpha$ is small enough; the solution $u(r, \alpha, m)$ will 
+not cross the $r$-axis.
+
+We divide the set of solutions into three subsets:
+\begin{enumerate}
+  \item Solutions that eventually takes on some negative values.
+    These are the ones for which $b(\alpha, m)$ are defined.
+    Let $N$ be the set of $(\alpha, m)$ for which the corresponding
+    solutions belong to this class.
+  \item Solutions that remain positive and satisfy
+    $\lim _{r \rightarrow \infty} u(r)=0$. Let $G$ (stands for "ground state")
+    be the set of $(\alpha, m)$ for which the corresponding solutions
+    belong to this class.
+  \item Solutions that remain non-negative but do not belong to case 2.
+    Let $P$ (stands for "positive") be the corresponding set of $(\alpha, m)$.
+    The term "positive" is justified because, as Lemma \ref{lemma:5} shows,
+    no solutions of an ordinary differential equation can be tangent to the $r$-aixs.
+\end{enumerate}
+
+The sets $N, G$, and $P$ partition the "quadrant" $(0, \infty) \times[0, \infty)$
+into three
+mutually disjoint subsets. Sometimes, for convenience,
+we say that a solution belongs to $N$,
+$G$, or $P$ when we should have said that the corresponding $(\alpha, m)$ belongs to the
+appropriate set. Also whenever there is no danger of confusion, we suppress the explicit
+mention of the variables $\alpha$ and $m$ in functions such as $u$ and $b$.
+From the classical theory of ordinary differential equations, we know that,
+in any compact $r$-interval, solutions
+of (3.1)--(3.5) depend continuously on the parameters $\alpha$ and $m$.
+
+As is well known, we can obtain a lot of information about the solutions
+from the Energy or Lyapunov function
+\begin{equation}\label{eq:3.6}
+  E(r)=\frac{u^{\prime 2}(r)}{2}+\frac{u^{p+1}(r)}{p+1}-\frac{u^2(r)}{2}  
+\end{equation}
+
+The inequality $E^{\prime}(r) = -m u^{\prime 2} / r \leq 0$ implies that $E$ decreases to a
+finite constant $E(\infty)$ as $r \rightarrow \infty$. It follows that all solutions must be
+bounded.
+
+\begin{lemma}\label{lemma:8}
+  If $E(a)=\frac{\alpha^{p+1}}{p+1}-\frac{\alpha^2}{2} \leq 0$, then $(\alpha, m) \in P \quad$ for any $m$. In other words, $(0, \gamma) \times[0, \infty) \subset P$, where $\gamma=\left(\frac{p+1}{2}\right)^{1 /(p-1)}$.
+\end{lemma}
+
+\begin{proof}
+  Since $E$ is decreasing, $E(r) \leq E(a) \leq 0$, for $r>a$.
+  The solution cannot cut the
+  $r$-axis; otherwise at a point of intersection
+  $E(r)=u^{\prime 2} / 2>0$ contradicting our
+  previous assertion.
+\end{proof}
+
+\begin{lemma}\label{lemma:9}
+  If $u \in P$, then it is oscillatory about the value 1 in the following sense.
+  The sets of its local maxima $\left\{a=r_0<r_2<\ldots\right\}$
+  and local minima $\left\{r_1<\right.$ $\left.r_3<\ldots\right\}$ interlace and, 
+  unless $u \equiv 1$
+  \begin{equation}\label{eq:3.7}
+    u\left(r_0\right)>u\left(r_2\right)>u\left(r_4\right)>\ldots>1    
+  \end{equation}
+  and
+  \begin{equation}\label{eq:3.8}
+    u\left(r_1\right)<u\left(r_3\right)<u\left(r_5\right)<\ldots<1.    
+  \end{equation}
+\end{lemma}
+
+
+\begin{proof}
+  We claim that $u$ cannot be monotone. Suppose this is not true.
+  We know that $u$ has a local maximum at $r=a$, because $u^{\prime \prime}(a)<0$.
+  Thus $u$ can only be monotone decreasing.
+  Let the limit $\lim _{r \rightarrow \infty} u(x)$ be denoted by $u(\infty)$.
+  We have
+  \[
+    \lim _{r \rightarrow \infty} u^{\prime \prime}(r)
+      = \lim _{r \rightarrow \infty}\left(-\frac{m}{r} u^{\prime}-u^p+u\right)
+      = -u^p(\infty)+u(\infty).
+  \]
+  This is incompatible with the monotonicity of $u$ unless the limit is zero,
+  which implies that $u(\infty)=1$. Let $v=u-1>0$. It satisfies the differential equation.
+  \[
+    v^{\prime \prime}+\frac{m}{r} v^{\prime}+\left(\frac{u^p-u}{u-1}\right) v = 0.
+  \]
+  Note that the fraction inside the parentheses is
+  larger than or equal to $p-1$ (for $u>1$).
+  We use Sturm's comparison theorem to conclude that $v$ oscillates
+  faster than the solutions of
+  \[
+    U^{\prime \prime}+\frac{m}{r} U^{\prime}+(p-1) U=0 .
+  \]
+  It is well known that all solutions $U$ of this differential equation are oscillatory,
+  but this contradicts the fact that the more oscillatory $v$ remains positive
+  for all $r$.
+
+  Hence we know that $u$ has at least one local minimum. Let $r_1$ be the first of them.
+  We cannot have $u\left(r_1\right)=1$, for then $E\left(r_1\right)$ attains the lowest
+  possiblie value that $E$ can take. This means that $E(r)=E\left(r_1\right)$ for all $r>r_1$,
+  and we have the case $u \equiv 1$ In all other cases, since $r_1$ is a local minimum,
+  $u^{\prime}\left(r_1\right)=0$ and 
+  $u^{\prime \prime}\left(r_1\right)=u\left(r_1\right)-u^p\left(r_1\right) \geq 0$.
+  This can hold only if $u\left(r_1\right)<1$. It follows that $E\left(r_1\right)<0$.
+  The same arguments as above show that $u$ cannot be monotone increasing
+  in $\left(r_1, \infty\right)$.
+  Repeating the arguments then gives two infinite sequences of critical points as asserted.
+  The strict inequalities in (3.7) and (3.8) are due to the fact
+  that $E^{\prime}=-u^{\prime 2} / 2$ cannot vanish identically
+  in any subinterval of $(a, b)$.
+\end{proof}
+
+Lemma \ref{lemma:9} has the following corollary
+
+
+\begin{lemma}\label{lemma:10}
+  Suppose a solution does not belong to $N$. Then it belongs to $G$ if and only if $E(\infty)=0$, and it belongs to $P$ if and only if $E(\infty)<0$.
+\end{lemma}
+
+\begin{proof}
+  If $u \in G$, then $\lim _{r \rightarrow \infty} u(r)=\lim _{r \rightarrow \infty} u^{\prime}(r)=0$. Thus $E(\infty)=0$. On the other hand, if $u \in P$, then $E\left(r_1\right)<0$ because $u\left(r_1\right)<1$. Thus $E(\infty)<E\left(r_1\right)$ $<0$.
+\end{proof}
+
+\begin{lemma}\label{lemma:11}
+  Let $u$ belong to either $N$ or $G$. Then $u^{\prime}(r)<0 \quad$ in $(a b(\alpha, m)]$ or $(a, \infty)$, respectively.
+\end{lemma}
+
+\begin{proof}
+  Suppose $u^{\prime}(c)$ vanishes in an interior point $c \in(a, b)$. Then $u(c) \neq 1$, lest $u \equiv 1$. If $u(c)<1$, then $E(c)<0$, contradicting the assumption that $u$ belongs to $N \cup G$. Finally, if $u(c)>1$, then $u^{\prime \prime}(c)<0$, so that $c$ is a local maximum. Between the two local maxima $r=a$ and $c$ there must be a local minimum, at which $u^{\prime \prime} \geq 0$, and this reduces to the previous case.
+\end{proof}
+
+The derivative $u^{\prime}(b)$ cannot vanish at the endpoint $b$,
+because this contradicts the uniqueness of initial value problem for (3.1);
+the trivial solution is the only solution of (3.1) that can vanish at $b$
+with a double zero.
+
+
+\begin{lemma}\label{lemma:12}
+  For $(\alpha, m) \in N$, $b(\alpha, m)$ is a continuous function of $\alpha$ and $m$.
+\end{lemma}
+
+\begin{proof}
+  This is a simple consequence of the fact that a solution $u$ can never be tangent to the $r$-axis at a zero.
+\end{proof}
+
+\begin{lemma}\label{lemma:13}
+  The sets $N$ and $P$ are open subsets of $(0, \infty) \times[0, \infty)$.
+\end{lemma}
+
+\begin{proof}
+  Let $\left(\alpha_0, m_0\right)$ be a point in $N$. The corresponding solution $u$ takes a negative value at some point $r=c$. By continuity, there is a neighborhood of $\left(a_0, m_0\right)$ for which $u(c, \alpha, m)<0$ for each $(\alpha, m)$ in the neighborhood. Thus all such solutions belong to $N$. Let $\left(a_0, m_0\right)$ be a point in $P$. Then $E(c)<0$ for some $r=c$. Continuity again yields a neighborhood for which $E(c)<0$ for each of the solutions belonging to the neighborhood. It follows that $E(\infty)<E(c)<0$ for each of these solutions, and so they must all belong to $P$.
+\end{proof}
+
+An immediate consequence of this lemma is that for each fixed $m$,
+the sets $N_m$ and $P_m$ (the intersections of $N$ and $P$ with 
+the straight line $(., m)$) are open subsets of $(0, \infty)$. 
+Each is therefore a union of countably many open intervals.
+The boundary points of $N$ or $P$ belong to $G$.
+The following lemma is a straightforward consequence of Lemmas 8 and 13.
+
+\begin{lemma}\label{lemma:14}
+  For a fixed m, the boundary value problem (3.1)-(3.4) has a unique solution if and only if
+  the sets $P_m$ and $N_m$ are both open intervals of the form $\left(0, \alpha_m\right)$ and
+  $\left(\alpha_m, \infty\right)$, respectively,
+  with one single common endpoint $\alpha_m \in G_m$.
+\end{lemma}
+
+We call a point $m$ regular if it satisfies the conditions of Lemma \ref{lemma:14}.
+For each regular $m$, there is therefore a unique $\alpha(m)=\alpha_m$ as asserted.
+This is, in fact, a continuous function of $m$ within any interval of regularity.
+As a first step towards establishing that fact, we prove that give any fixed $\bar{m}>0$,
+the set of points in $G$ with $m \leq \bar{m}$ is bounded.
+
+\begin{lemma}\label{lemma:15}
+  For any given $\bar{m}>0$, there exists an $\bar{\alpha}>0$
+  such that $G\subset (0, \bar{\alpha})\times[0, \bar{m}]$.
+\end{lemma}
+
+\begin{proof}
+  It suffices to show that for some $\bar{\alpha}$,
+  $[\bar{\alpha}, \infty) \times[0, \bar{m}] \subset N$. Consider the comparison equation
+  \begin{equation}\label{eq:3.9}
+  U^{\prime \prime}+\frac{\bar{m}}{a} U^{\prime}+U^p-U=0 \quad \text { on }[a, \infty) .
+  \end{equation}
+  Since the coefficient of the second term is a constant, the equation can be explicitly
+  solved, at least in theory. It is then not hard to see that there exists an $\bar{\alpha}>0$, 
+  such that if $U(a) \geq \bar{\alpha}, U^{\prime}(a)=0$, then $U(r)$ cuts the $r$-axis at 
+  some point, say $b$.
+  Using as new variables $S=U^{\prime 2}(r)$ and $x=U(r)$, we can rewrite \eqref{eq:3.9} as
+  \begin{equation}\label{eq:3.10}
+    \frac{d S}{d x}=\frac{2 \bar{m}}{a} \sqrt{S}+f(x), \quad S(\alpha)=0,
+  \end{equation}
+  where $f(x)=2\left(x^p-x\right)$. Similarly, we can rewrite $(3.1)$,
+  using $s=u^{\prime 2}(r)$ and $x=u(r)$, as
+  \begin{equation}\label{eq:3.11}
+    \frac{d s}{d x}=\frac{2 m}{r} \sqrt{s}+f(x)
+      \leq \frac{2 \bar{m}}{a} \sqrt{s}+f(x), \quad s(\alpha)=0.
+  \end{equation}
+
+  An application of the theory of differential inequalities gives
+  \begin{equation}\label{eq:3.12}
+    S(x) \leq s(x), \quad \text { for all } 0 \leq x \leq \alpha.    
+  \end{equation}
+  In other words, $U^{\prime 2}\left(r_1\right) \leq u^{\prime 2}\left(r_2\right)$, 
+  whenever $x=U\left(r_1\right)=u\left(r_2\right)$; see Figure 1.
+  Since both $u^{\prime}$ and $U^{\prime}$ are negative, we have
+  \begin{equation}\label{eq:3.13}
+    0>U^{\prime}\left(r_1\right) \geq u^{\prime}\left(r_2\right).    
+  \end{equation}
+  This implies that $u$ must cut the $r$-axis before $b$. It follows that $(\alpha, m) \in N$.
+\end{proof}
+
+\begin{lemma}\label{lemma:16}
+  If all points $m \in\left(m_1, m_2\right)$ are regular, then $\alpha_m$ is a continuous
+  function of $m$. The set of limit points of the curve $\left\{\alpha(m): m_1<m<m_2\right\}$
+  that lie on each of the lines $m=m_1$ and $m=m_2$ are thus connected closed intervals.
+  In case one of the endpoints is also regular, the corresponding limit set reduces to the
+  single point $\alpha\left(m_1\right)$ or $\alpha\left(m_2\right)$.
+\end{lemma}
+
+\begin{proof}
+  Let $m_0 \in\left(m_1, m_2\right)$. Suppose $\lim _{m \rightarrow m_0} \alpha(m)$ is not $\alpha\left(m_0\right)$. By compactness, there exists a sequence of points $\left\{m_{(i)}\right\} \subset\left(m_1, m_2\right), \quad m_{(i)} \rightarrow m_0$, but $\alpha_{\infty}=$ $\lim _{i \rightarrow \infty} \alpha\left(m_{(i)}\right) \neq \alpha\left(m_0\right)$. Then $\alpha_{\infty}$ belongs either to $N$ or to $P$, contradicting the fact that both are open sets. The other assertions are obvious.
+\end{proof}

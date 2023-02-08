@@ -1,0 +1,228 @@
+\section{Some Sturmian Theory}
+
+The form of Sturm's comparison theorem found in most textbooks is not strong
+enough for our purpose. The following formulation can be found, for instance,
+on p. 229 in Ince's classical book, \emph{Ordinary Differential Equations}, Dover, 1956.
+By a solution we always mean a nontrivial solution.
+
+\begin{lemma}[Sturm]\label{lemma:1}
+  $U$ and $V$ are, respectively, solutions of the following equations:
+  \begin{equation}\label{eq:2.1}
+    U''(x) + f(x)U'(x) + g(x)U(x) = 0,\quad x\in (a,b),
+  \end{equation}
+  \begin{equation}\label{eq:2.2}
+    V''(x) + f(x)V'(x) + G(x)V(x) = 0,\quad x\in (a,b),
+  \end{equation}
+  where $f$, $g$, and $G$ are continuous (actually, only local integrability is needed).
+  Let $(\mu,\nu)$ be a subinterval in which $V(x)\neq 0$ and $U(x)\neq 0$,
+  and in which the comparison condition
+  \begin{equation}\label{eq:2.3}
+    G(x) \geq g(x)\quad \text{for all } x\in (\mu,\nu) 
+  \end{equation}
+  holds. Suppose further that
+  \begin{equation}\label{eq:2.4}
+    \frac{V'(\mu)}{V(\mu)} \leq \frac{U'(\mu)}{U(\mu)}.
+  \end{equation}
+  Then
+  \begin{equation}\label{eq:2.5}
+    \frac{V'(x)}{V(x)} \leq \frac{U'(x)}{U(x)}\quad \text{for all } x\in (\mu,\nu).
+  \end{equation}
+  Equality in \eqref{eq:2.5} can occur only if $U\equiv V$ in $[\mu, x]$.
+  If either $\mu$ or $\nu$ is a zero of $U$ or $V$, then the functions
+  in \eqref{eq:2.4} and \eqref{eq:2.5} are interpreted as $\infty$.
+\end{lemma}
+
+From this lemma follows the usual assertion that between any two consecutive
+zero of $U(x)$, there must be at least one zero of $V(x)$.
+In fact, $V(x)$ may have more than one zeros in that interval.
+It is natural to say that $V(x)$ oscillates faster than $U(x)$.
+
+Sometimes it is more convenient to replace the comparison conditions \eqref{eq:2.1},
+\eqref{eq:2.2} and \eqref{eq:2.3} by the equivalent conditions
+\begin{equation}\label{eq:2.1prime}
+  U''(x) + f(x)U'(x) + h(x)U(x) \geq 0, \quad U(x)>0 \quad \text{in } (\mu,\nu), \tag{2.1$'$}
+\end{equation}
+\begin{equation}\label{eq:2.2prime}
+  V''(x) + f(x)V'(x) + h(x)V(x) \leq 0, \quad V(x)>0 \quad \text{in } (\mu,\nu), \tag{2.2$'$}
+\end{equation}
+If either $U$ or $V$ is negative, the corresponding inequality has to be reversed.
+
+A simple consequence of Sturm's theorem is the following.
+
+\begin{lemma}\label{lemma:2}
+  (i) If in addition to all the hypotheses of Lemma~\ref{lemma:1}, we have
+  \begin{equation}
+    0 < V(\mu) < U(\mu),
+  \end{equation}
+  then
+  \begin{equation}
+    V(x) \leq U(x)\qquad \text{for all } x\in (\mu,\nu).
+  \end{equation}
+  (ii) If in addition to all the hypotheses of Lemma \ref{lemma:2},
+  $\lim_{x\to \nu} V(x) = \pm\infty$, then
+  $\lim_{x\to\nu} U(x) = \pm\infty$.
+\end{lemma}
+
+\begin{proof}
+  The conclusion follows from an integration of (2.5).
+\end{proof}
+
+Suppose that equation (2.1) has solutions that do not vanish
+in a neighborhood of the point $b$.
+The largest neighborhood of $b$, $(c,b)$, on which there exists
+a solution of (2.1) without zeros is called the disconjugacy
+neighborhood of $b$, or, in short, the disconjugacy interval
+of (2.1). It follows from Sturm's theorem that no non-trivial
+solution can have more than one zero in $(c,b)$.
+On the other hand, unless $c=a$, any solution of (2.1)
+that has a zero before $c$ must have another zero in $(c,b)$.
+The following is another corollary of Sturm's theorem.
+
+\begin{lemma}\label{lemma:3}
+  Consider the same two equations, (2.1) and (2.2), satisfying
+  the comparison condition (2.3).
+  In addition, we assume that $U\not\equiv V$
+  in any neighborhood of $b$. If there exists a solution $V$
+  of (2.2) with a largest zero at point $\varrho$,
+  then the disconjugacy interval of (2.1) is a strict superset of $(\varrho, b)$.
+\end{lemma}
+
+We need another comparison lemma that handles equations with different second terms.
+It is not usually included in the classical Sturm theory.
+It can be proved easily using results from the theory of differential inequalities.
+See [9] for the proof of a related result.
+
+\begin{lemma}\label{lemma:4}
+  Suppose instead of (2.2), $V$ sartisfies the differential equation
+  \begin{equation}\label{eq:2.8}
+    V''(x) + F(x)V'(x) + G(x)V(x) = 0,\quad x\in (a,b),
+  \end{equation}
+  and the comparison condition
+  \begin{equation}\label{eq:2.9}
+    F(x) \geq f(x) \geq 0\quad \text{for all } x\in (\mu,\nu).
+  \end{equation}
+  The conclusions of Lemma~\ref{lemma:1} or Lemma~\ref{lemma:2}
+  still hold provided that either
+  \begin{equation}\label{eq:2.10}
+    U'(x)\geq 0 \quad \text{for all } x\in (\mu,\nu)
+  \end{equation}
+  or
+  \begin{equation}\label{eq:2.11}
+    V'(x)\geq 0 \quad \text{for all } x\in (\mu,\nu).
+  \end{equation}
+\end{lemma}
+
+\begin{proof}
+  Let us assume that \eqref{eq:2.10} holds;
+  the proof for the case in which \eqref{eq:2.11} holds is similar.
+  Define $r(x) = U'(x)/U(x)\geq 0$ and $R(x) = V'(x)/V(x)$.
+  They satisfy
+  \[r'(x) = -(f(x)r(x)+g(x)+r^2(x)) \geq -(F(x)r(x)+G(x)+r^2(x)),\]
+  and
+  \[R'(x) = -(F(x)R(x)+G(x)+R^2(x)).\]
+  We also have the initial comparison condition $r(\mu) \geq R(\mu)$.
+  From the theory of differential inequalities, we can then conclude
+  that $r(x)\geq R(x)$ for all $x$ in $(\mu,\nu)$.
+\end{proof}
+
+The next lemma, though not a direct consequence of Sturm's theorem,
+is definitely motivated by it. It is well known that if $U$ is a solution
+of a second-order ordinary differential equation such as \eqref{eq:2.1},
+then at a zero of $U$, the derivative of $U'$ cannot vanish.
+If $z$ satisfies a second-order ordinary differential inequality in such
+a way that $z$ oscillates more than $U$,
+then intuition tells us that the tangent line to the graph of $z$
+is being bent more strongly towardz the $x$-axis than that of $U$.
+Hence the derivative of $z$ at a zero cannot vanish.
+A convenient reference for a proof of this fact has not been found.
+Reproduced here is the short proof that was given in [7].
+
+\begin{lemma}\label{lemma:5}
+  Suppose a function $z(t)$ is positive (negative) in an interval
+  $(\mu,\nu)$, either $z(\mu)=0$ or $z(\nu)=0$, and it satisfies
+  the inequality
+  \begin{equation}\label{eq:2.12}
+    z''(t) + f(t)z'(t) + g(t)z(t) \leq (\geq ) 0,\quad \text{in }(\mu,\nu),
+  \end{equation}
+  where $f$ and $g$ are any continuous functions.
+  Then $z'(\mu)\neq 0$ ($z'(\nu)\neq 0$).
+\end{lemma}
+
+\begin{proof}
+  We give the proof only for the case $z(t)\geq 0$ and $z(\mu) = 0$;
+  the other cases can be proved similarly. We may assume without loss of
+  generality that $f(x)=0$, since an equation of the more general form
+  can be reduced to this particular case using a change of independent variable.
+  Equation \eqref{eq:2.12} now takes the form
+  \begin{equation}\label{eq:2.13}
+    z'' + g(x)z = -P(x),\quad x>0,
+  \end{equation}
+  where $P(x) \geq 0$. Let $z_1(x)$ and $z_2(x)$ be independent solutions of the
+  homogeneous equation associated with different equation \eqref{eq:2.13},
+  satisfying the initial conditions
+  \begin{align*}
+    & z_1(\mu) = 0,\qquad z_1'(\mu) = 1, \\
+    & z_2(\mu) = 1,\qquad z_2'(\mu) = 0.
+  \end{align*}
+  Suppose that the conclusion of the lemma is false, namely,
+  that $z'(\mu)=0$. By the formula of variation of constants
+  \begin{equation}\label{eq:2.14}
+    z(x) = \int_\mu^x [z_1(s)z_2(x) - z_1(x)z_2(s)] P(s)\,ds
+  \end{equation}
+  Let $h(s,x) = [z_1(s)z_2(x) - z_1(x)z_2(s)]$. At $x=s$,
+  $\partial h(s,x)/\partial x$, being the Wronskian of $z_1(x)$
+  and $z_2(x)$, is $-1$. By continuity $\partial h(s,x)/\partial x$
+  is therefore negative in a neighborhood of $(0,0)$.
+  At $x=s$, $h(s,x)=0$. Thus for $x>s$ and $x$ sufficiently close to $s$,
+  $h(s)<0$. It then follows that the integrand in \eqref{eq:2.14}
+  is negative for $x>\mu$ but sufficiently close to $\mu$.
+  This then implies that $z(x)$ is negative, contradicting our assumption
+  that it is positive in $(\mu,\nu)$.
+\end{proof}
+
+If the inequality sign in \eqref{eq:2.12} is strict at the point $x=\mu$,
+then the conclusion follows trivially from the facts that $z$ has a minimum
+at $\mu$ so that $z''(\mu)\geq 0$, contradicting \eqref{eq:2.12}.
+The proof for Lemma \ref{lemma:5} is needed to handle the general case.
+
+Next are established some asymtotic properties of the solutions of the linear
+equation
+\begin{equation}\label{eq:2.15}
+  U'' + \frac{m}{x}U' + g(x)U = 0,\quad x>0,
+\end{equation}
+where $m>0$ is a constant and $g$ is continuous with $\lim_{x\to\infty} g(x) = -2k^2$,
+for some $k>0$.
+
+\begin{lemma}\label{lemma:6}
+  Let $(c, \infty)$ be the disconjugacy interval of $(2.15)$. Every solution of (2.15) with a zero in $(c, \infty)$ is unbounded.
+  
+  Conversely, if the last zero of an unbounded solution of (2.15) is $\varrho$, then $\varrho$ is an interior point of the disconjugacy interval. In the other words, $\varrho>c$.
+\end{lemma}
+
+\begin{proof}
+  We have to show that equation (2.15) is non-oscillatory, so that the disconjugacy interval is well defined. Let $\mu$ be so large that $g(x) \leq-k^2$, and $m / x \leq 2 k$ for $x \in[\mu, \infty)$. We compare (2.15) with the equation
+  \[
+  V^{\prime \prime}+2 k V^{\prime}-k^2 V=0, \quad x \in[\mu, \infty)
+  \]
+  using Lemma \ref{lemma:4} in the form of Lemma \ref{lemma:2}. We can conclude that for the solutions $U_1$ and $V_1$ of (2.15) and (2.16), respectively, that satisfy the initial conditions
+  \[
+  U_1(\mu)=V_1(\mu)=1, \quad U_1^{\prime}(\mu)=V_1^{\prime}(\mu)=1,
+  \]
+  the inequality
+  \[
+  V_1(x) \leq U_1(x), \quad x>\mu,
+  \]
+  holds. Since $V_1$ is non-oscillatory and unbounded, so is $U_1$. If all solutions of (2.15) are unbounded, then our lemma is true. Thus suppose there is a bounded solution $U_2$. Then $U_1$ and $U_2$ are linearly independent, and all other solutions are of the form $U=c_1 U_1+c_2 U_2$, with constants $c_1$ and $c_2$. It follows that any solution that is not a multiple of $U_2$ is unbounded. Let us show that $U_2$ cannot have a zero in the disconjugacy interval, from which the assertion of the lemma follows. Suppose that $U_2$ does have a zero at $\varrho \in(c, \infty)$. Let $U$ be the solution of (2.15) that satisfies the initial conditions, $U(\varrho+1)=U_2(\varrho+1)$ and $U^{\prime}(\varrho)=U_2^{\prime}(\varrho)-\varepsilon$ with $\varepsilon>0$. By taking $\varepsilon$ small enough, we ensure that $U$ has a zero so close to $\varrho$ that it falls in the disconjugacy interval. Thus $U$ cannot have another zero beyond $\varrho+1$. In other words, $U$ remains positive in $[\varrho+1, \infty)$. By Lemma $2, U(x) \leq$ $U_2(x)$, for $x \geq \varrho+1$. It follows that $U$ is bounded, but this contradicts the fact that $U$ is not a multiple of $U_2$.
+\end{proof}
+
+\begin{lemma}\label{lemma:7}
+  If $U$ is a solution of $(2.15)$ such that $U^{\prime}(x)<0$ for all $x$ sufficiently large, then $-U^{\prime}(x) / U(x) \geq k$ for all $x$ sufficiently large.
+\end{lemma}
+
+\begin{proof}
+  Let $R(x)=-U^{\prime}(x) / U(x)$. It satisfies the Riccati equation
+  \[
+  R^{\prime}=R^2-\frac{m}{x} R+g(x)<R^2+g(x) .
+  \]
+  If $R(x)<k$ for some large $x$, for which $g(x)$ is close to its limit $-2 k^2$, then $R^{\prime}$ will remain strictly negative, eventually causing $R$ to change sign. This contradiction proves the lemma.
+\end{proof}

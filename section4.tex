@@ -1,0 +1,568 @@
+\section{Main Result, \boldmath{$a>0$}}\label{sec:4}
+
+The main result is established through a careful study of the signs of the function
+values in $[a,b(\alpha,m))$ of the function
+\begin{equation}\label{eq:4.1}
+  w(r,\alpha,m) = \frac{\partial u}{\partial \alpha} (r,\alpha,m).
+\end{equation}
+We are interested only in those $w$ that come from solutions in either $N$ or $G$,
+and we are concerned only with their behavior in the interval $[a, b$ )
+(we interpret $b$ to be $\infty$ in case $u \in G$ ).
+When there is no danger of confusion, we suppress the variables $\alpha$ and $m$ in the
+function notation.
+
+By differentiating \eqref{eq:3.1} and \eqref{eq:3.5},
+we derive the following initial value problem for $w$:
+\begin{equation}\label{eq:4.2}
+  w^{\prime \prime}+\frac{m}{r} w^{\prime}+\left(p u^{p-1}-1\right) w=0,
+\end{equation}
+\begin{equation}\label{eq:4.3}
+  w(a)=1, \quad w^{\prime}(a)=0.
+\end{equation}
+Equation \eqref{eq:4.2} is a ``linear'' equation in $w$ if we regard $u$ as a known function.
+An immediate consequence is that $w$ cannot be tangent to the $r$-axis.
+As $r$ goes through a zero of $w, w$ has to change sign.
+
+\begin{lemma}\label{lemma:17}
+  For $u \in G \cup N, w$ has to change sign at least once in $[a, b)$.
+\end{lemma}
+
+\begin{proof}
+  Rewrite \eqref{eq:3.1} as
+  \begin{equation}\label{eq:4.4}
+    (u-1)^{\prime \prime}+\frac{m}{r}(u-1)^{\prime}+\left(\frac{u^p-u}{u-1}\right)(u-1) = 0,
+  \end{equation}
+  and view it as a ``linear'' equation in $(u-1)$, with the expression inside the large
+  parentheses as the coefficient of the last term. Since this coefficient is smaller than the
+  corresponding one in (4.2), when $u \geq 1$, we conclude from Sturm's comparison theorem
+  that $w$ oscillates faster than $(u-1)$, so $w$ must vanish before the first zero of $(u-1)$,
+  namely, before the point $\xi \in(a, b)$ at which $u(\xi)=1$.
+\end{proof}
+
+Our ultimate aim is to show that $w$ cannot change sign more than once in $[a, b)$.
+We say that $(\alpha, m)$ is admissible if this is true, more precisely,
+when
+\begin{equation}\label{eq:4.5}
+  (\alpha, m) \in G \cup N, \quad \text{and}
+    \quad w(r, \alpha, m) \text{ has exactly one zero in } [a, b).
+\end{equation} 
+If, in addition,
+\begin{equation}\label{eq:4.6}
+  w(b, \alpha, m)<0, \quad \text { for }(\alpha, m) \in N,
+\end{equation}
+or
+\begin{equation}\label{eq:4.7}
+  \lim _{r \rightarrow \infty} w(r, \alpha, m)=-\infty, \quad \text { for }(\alpha, m) \in G,  
+\end{equation}
+we say that $(\alpha, m)$ is strictly admissible. The following well known lemma connects the
+concepts of admissibility and regularity and is the key idea in the
+\textsc{Kolodner}-\textsc{Coffman} method.
+
+\begin{lemma}\label{lemma:18}
+  Let $m$ be fixed. If $(\alpha, m) \in N$ is strictly admissible,
+  then in a neighborhood of $\alpha, b$ is a strictly decreasing function of $\alpha$.
+\end{lemma}
+
+\begin{proof}
+  By assumption, $\frac{\partial u}{\partial \alpha}(b(\alpha), \alpha)=w(b(\alpha))<0$.
+  Hence, for $\varepsilon>0$ small enough, $u(b(\alpha), \hat{\alpha})<0$
+  for all $\hat{\alpha} \in(\alpha, \alpha+\varepsilon)$. By the Intermediate Value theorem,
+  $u(r, \hat{\alpha})$ must have a zero in $(a, b(\alpha))$.
+  Therefore, $b(\hat{\alpha})<b(\alpha)$.
+  It is not hard to see that this local monotonicity together with the continuity
+  of $b$ (Lemma \ref{lemma:12}) implies monotonicity in a neighborhood of $\alpha$.
+\end{proof}
+
+The following lemma complements Lemma \ref{lemma:18}.
+
+\begin{lemma}\label{lemma:19}
+  If for $(\alpha, m) \in G, \lim _{r \rightarrow \infty} w(r)=-\infty(\infty)$,
+  in particular if $(\alpha, m)$ is strictly admissible,
+  then there exists a right (left) neighborhood of a that belongs to $N$.
+\end{lemma}
+
+\begin{proof}
+  Let $\tau$ be the largest zero of $w$ in $[a, b)$.
+  By Lemma \ref{lemma:6}, the disconjugacy interval $(c, \infty)$ of equation (4.2) contains $\tau$. 
+  Suppose first that $w$ is negative after $\tau$. Take a point $\zeta \in(c, \tau)$ and a 
+  point $\lambda \in(\tau, \infty)$. Since $w(\zeta)>0$ and $w(\lambda)<0$, for $\varepsilon>0$ 
+  small enough, $u(\zeta, \hat{\alpha})>w(\alpha)$, and $u(\lambda, \hat{\alpha})<w(\alpha)$, 
+  for all $\hat{\alpha} \in(\alpha, \alpha+\varepsilon)$. In case $w$ is positive beyond 
+  $\tau$, the same is true for all $\hat{\alpha}$ in a left neighborhood
+  $(a-\varepsilon, \alpha)$ instead. So $\hat{u}(r)=u(r, \hat{\alpha})$ must intersect $w(r)$ 
+  at a point $\chi$ in $(\zeta, \lambda)$. This point is therefore within the disconjugacy 
+  interval $(c, \infty)$. We claim that $\hat{u}(r)$ must intersect the $r$-axis
+  in $(\chi, \infty)$. Suppose that this is not true. Then $u(r, \hat{\alpha})$
+  remains positive in $(\chi, \infty)$. It lies below the graph of $w$ in a right neighborhood 
+  of the point $\chi$. Let us suppose that it catches up with $w$ at a point $\eta>\chi$.
+  Then in $(\chi, \eta)$, the function $z(r)=u(r)-\hat{u}(r)$ is positive and satisfies the 
+  differential equation
+  \begin{equation}\label{eq:4.8}
+    z^{\prime \prime}+\frac{m}{r} z^{\prime}+\left(\frac{u^p-\hat{u}^p}{u-\hat{u}}-1\right) z=0.    
+  \end{equation}
+  Observe that the coefficient of the last term is less than that in (4.2).
+  Hence $z$ oscillates less than the solutions of (4.2). But the disconjugacy interval of (4.2) 
+  being $(c, \infty)$ means that the solutions of $(4.2)$ cannot have two zeros in the interval 
+  $[\chi, \eta]$. It follows that the less oscillatory $z$ cannot have two zeros in the same 
+  interval, contradicting the assumption that $z(\chi)=z(\eta)=0$. Thus $\hat{u}$ remains below 
+  $u$ throughout $(\chi, \infty)$. Then the coefficient of $(4.8)$ is less than that of $(4.2)$ 
+  in the whole interval $(\chi, \infty)$, implying that $z$ is less oscillatory than the 
+  solutions of (4.2) in $(\chi, \infty)$. Since $\chi$ is in the disconjugacy interval
+  of $(4.2)$, by Lemma \ref{lemma:6} , a solution of (4.2) that vanishes at $\chi$ must be unbounded.
+  By Lemma \ref{lemma:2}, the less oscillatory $z$ must also be unbounded. This contradicts the fact that 
+  $\hat{u}(r)<u(r) \rightarrow 0$ as $r \rightarrow \infty$, unless $\hat{u}$ intersects the 
+  $r$-axis. Thus $u(r)=u(r, \bar{\alpha})$ belongs to $N$ for all $\bar{\alpha}$
+  in $(\alpha, \alpha+\varepsilon)$ or $(\alpha-\varepsilon, \alpha)$ as asserted.
+\end{proof}
+
+Now if we can show that all points $(\alpha, m)$ in the union $G \cup N$ are strictly 
+admissible, then we have uniqueness for the boundary value problems (3.1), (3.2), (3.3)
+and $(3.1),(3.2),(3.4)$. Let us follow the development as $\alpha$ increases from 0.
+By Lemma \ref{lemma:8}, we first have solutions in $P$. As the first boundary point $\alpha_m$ of $G$
+is reached, we have a solution in $G$. By Lemma \ref{lemma:19}, a right neighborhood of $\alpha_m$
+belongs to $N$. By Lemma \ref{lemma:18}, as $\alpha$ continues to increase from $\alpha_m$,
+the point $b(\alpha)$ moves strictly towards the lefthand side without retracing
+any previous locations. Thus all $\alpha>\alpha_m$ belongs to $N$, and no two values of
+$\alpha$ can solve the boundary value problem (3.1), (3.2), (3.3) for the same $b$.
+
+The desired claim (that all members of $G \cup N$ are strictly admissible), although valid,
+is by no means easy to verify.
+
+We introduce the function
+\begin{equation}\label{eq:4.9}
+  \theta(r)=-r u^{\prime}(r) / u(r), \quad r \in[a, b),
+\end{equation}
+for a solution $u \in G \cup N$.
+
+\begin{lemma}\label{lemma:20}
+  The function $\theta$ is continuous in $[a, b), \theta(a)=0$
+  and $\lim _{r \rightarrow b} \theta(r)=\infty$.
+\end{lemma}
+
+\begin{proof}
+  The last assertion for the case $b=\infty$ is the only non-trivial one.
+  By Lemma $7,-r u^{\prime}(r) / u(r)>k r$ for large $r$. The conclusion then follows.
+\end{proof}
+
+We draw a horizontal line of height $\beta \geq 0$ above the $r$-axis. It can interact with the graph of $\theta$ in any one of the ways depicted in Figures 2--4.
+
+With the given $\beta$, we define the function
+\begin{equation}\label{eq:4.10}
+  v_\beta(r)=r u^{\prime}(r)+\beta u(r), \quad r \in[a, b].  
+\end{equation}
+The next lemma relates the properties of $v$ to the way $\theta$ interacts
+with the horizontal line. We omit the simple proof.
+The last assertion is nothing more than the elementary Inverse Function theorem.
+
+\begin{lemma}\label{lemma:21}
+  $v(r)=(>,<) 0$ if and only if $\theta$ intersects (is below, is above)
+  the straight line at $r$.
+
+  $v$ is tangent to the $r$-axis at $r$ if and only if $\theta$ is tangent to the line at $r$.
+  
+  The smallest zero of $v$ (the first intersection point of $\theta$ with the straight line), 
+  denoted by $\varrho=\varrho_\beta$ is a non-decreasing function of $\beta$.
+  If $\theta^{\prime}\left(\varrho_\beta\right) \neq 0$, then the function $\varrho$ is 
+  continuous at $\beta$.
+\end{lemma}
+
+It is easy to verify that $v$ satisfies the differential equation
+\begin{equation}\label{eq:4.11}
+  v^{\prime \prime}+\frac{m}{r} v^{\prime}+\left(p^{p-1}-1\right) v 
+    = -2\left(u^p-u\right)+\beta(p-1) u^p.
+\end{equation}
+Let us define
+\begin{equation}\label{eq:4.12}
+  \phi(u)=-2\left(u^p-u\right)+\beta(p-1) u^p .  
+\end{equation}
+The right-hand side of (4.11) is then the following composite function
+\[\Phi(r)=\phi(u(r)).\]
+
+\begin{lemma}\label{lemma:22}
+  For any $\beta \geq 0$, there exists a unique point $\sigma=\sigma_\beta \in[a, b)$
+  such that
+  \begin{equation}\label{eq:4.13}
+    \Phi(r)<0 \text { for } r<\sigma \text { and } \Phi(r)>0 \text { for } r>\sigma.  
+  \end{equation}
+  The point $\sigma$ is a continuous non-decreasing function of $\beta$.
+\end{lemma}
+
+\begin{proof}
+  If $\beta(p-1)-2 \geq 0$, then $\sigma=a$. If $\beta(p-1)-2<0, \phi(u)$
+  is a concave function of $u$. It therefore has exactly one zero $u_0$ distinct from 0.
+  Then $\sigma$ is the unique (since $u$ is strictly decreasing) point 
+  for which $u(\sigma)=u_0$ in case $u_0<\alpha$ and is $a$ otherwise.
+  The continuity of $\sigma$ follows from the continuity of $u_0$ on $\beta$
+  and the continuity of the inverse of $u$. Finally, the monotonicity of $\sigma$
+  follows from the positivity of the term containing $\beta$ in (4.12).
+\end{proof}
+
+Let us follow the movement of $\varrho$ and $\sigma$ as $\beta$ increases.
+For $\beta=0, \varrho=0$ and $\sigma>0$. Thus at this starting moment,
+the point $\varrho$ is positioned to the left of the point $\sigma$.
+As we increase $\beta, \varrho$ moves to the right while $\sigma$ moves to the left.
+For $\beta$ large enough, $\varrho$ will be very close to $b$ while $\sigma$
+will be very close to $a$. Thus a switching of the positions of $\varrho$ and $\sigma$
+is bound to occur. If it is not for the possibility of a discontinuous jump of $\rho$,
+we can conclude at once that for some suitable value of $\beta$,
+the two points $\varrho$ and $\sigma$ meet head-on. Nevertheless,
+this assertion is still true.
+
+\begin{lemma}\label{lemma:23}
+  There exists a $\beta_0>0$ at which $\varrho=\sigma$.
+\end{lemma}
+
+\begin{proof}
+  We need to affirm the impossibility of a discontinuity of $\varrho$ (by Lemma \ref{lemma:21},
+  we have only to show that $\theta^{\prime}(\varrho) \neq 0$ ) before the meeting
+  of the points takes place. Suppose, then, $\beta>0$ is such that
+  $\varrho_\beta \leq \sigma_\beta$.
+  By the definition of $\sigma, \Phi(r) \leq 0$ for $r \leq \sigma_\beta$.
+  In particular, $\Phi(r) \leq 0$ in the interval $\left[a, \varrho_\beta\right]$.
+  Hence, in this interval, $v$ is non-negative and satisfies the differential inequality
+  \begin{equation}\label{eq:4.14}
+    v^{\prime \prime}+\frac{m}{r} v^{\prime}+\left(p u^{p-1}-1\right) v \leq 0.
+  \end{equation}
+  By Lemma \ref{lemma:5}, $v^{\prime}\left(\varrho_\beta\right) \neq 0$. This is equivalent,
+  by Lemma \ref{lemma:21}, so the fact $\theta^{\prime}\left(\varrho_\beta\right) \neq 0$, as desired.
+\end{proof}
+
+What do $\theta$ and $v$ and their properties have to do with our goal?
+We answer this question with the following lemma.
+
+\begin{lemma}\label{lemma:24}
+  If $\theta$ intersects the straight line $\theta=\beta_0$ exactly once,
+  then the corresponding $u$, or more precisely, the corresponding $(\alpha, m)$
+  is strictly admissible.
+\end{lemma}
+
+\begin{proof}
+  The hypotheses imply that $v=v_{\beta_0}$ has exactly one zero in $(a, b)$.
+  Note that in case $b \neq \infty, v(b)=b_0 u^{\prime}(b)<0$.
+  Thus $v$ has exactly one zero in $[a, b]$. In $(a, \varrho)$,
+  $v$ is positive and satisfies inequality (4.14), while $w$ satisfies the equation (4.2).
+  At $a$,
+  \[
+    v^{\prime}(a) = \left(1+\beta_0\right) u^{\prime}(a)+\beta_0 a u^{\prime \prime}(a)
+      = \beta_0 a u^{\prime \prime}(a) < 0,
+  \]
+  so that the comparison conditions for the initial point is verified.
+  By Lemma 1 , $v$ oscillates faster than $w$, so that $\varrho$, the first zero of $v$
+  is less than $\tau$, the first zero of $w$. In the interval $(\tau, b)$,
+  $v$ is negative and satisfies the reverse differential inequality
+  \begin{equation}\label{eq:4.15}
+    v^{\prime \prime}+\frac{m}{r} v^{\prime}+\left(p u^{p-1}-1\right) v \geq 0.
+  \end{equation}
+  Thus $v$ again oscillates faster than $w$ in $(\tau, b)$. By assumption $v$
+  has no more zeros beyond $\tau$, so $w$ cannot have any zero beyond $\tau$ either.
+  In case $b<\infty$, we conclude that $w(b) \neq 0$, and so $(\alpha, m)$
+  is strictly admissible. When $b=\infty$, using Lemma \ref{lemma:3},
+  we see that the disconjugacy interval for (4.2) is a proper superset of $(\tau, b)$.
+  By Lemma \ref{lemma:6}, $w$ is thus unbounded, and $(\alpha, m)$ is strictly admissible.
+\end{proof}
+
+Our next lemma tells us that we can even start out with less and yet end up
+with more than we expect.
+
+\begin{lemma}\label{lemma:25}
+  Let $\xi$ be the only point in $(a, b)$ at which $u(\xi)=1$. If $\theta(r) \geq \beta_0$
+  for all $r \in[\varrho, \xi]$, then $\theta^{\prime}(r)>0$ for all $r \in[a, b)$.
+  As a result the corresponding $(\alpha, m)$ is strictly admissible.
+\end{lemma}
+
+\begin{proof}
+  We first prove that $\theta^{\prime}(r) \geq 0$ in $[\xi, b)$ in any case.
+  Suppose this is not true. Then there exist local minima in $(\xi, b)$,
+  since $\lim _{r \rightarrow b} \theta(r)=\infty$.
+  We draw a horizontal line of height $\beta$ to touch the lowest of all such minima,
+  say at the point $c \in(\xi, b)$.
+  The corresponding $v_\beta$ is then negative in $(c, b)$ and has a double zero at $r=c$.
+  In $[\xi, b), \Phi(r) \geq 0$, so $v_\beta$ satisfies differential inequality (4.15).
+  This contradicts Lemma \ref{lemma:5}.
+  
+  Together with the hypotheses, we now have $\theta(r) \geq \beta_0$
+  for all $r \in[\varrho, b)$.
+  As already established in the proof of Lemma \ref{lemma:23},
+  $\theta^{\prime}(r)>0$ for $r \in[a, \varrho]$.
+  Let us derive a contradiction by assuming that $\theta^{\prime}(r)<0$ for $r>\varrho$.
+  Under this assumption, $\theta$ has local minima in $(\varrho, b)$.
+  Since $\theta(r) \geq \beta_0$ in $(r, b)$, such minima have height above $\beta_0$.
+  Let us raise the horizontal line from height $\beta_0$ to a height $\beta$
+  to touch the smallest of these local minima, say at a point $c>Q$.
+  Then $v_\beta$ is negative in $(c, b)$, and has a double zero at $c$.
+  Since $\beta \geq \beta_0, \varrho_\beta \geq \sigma_\beta$,
+  implying that $\Phi(c) \geq 0$. Again this contradicts Lemma \ref{lemma:5}.
+\end{proof}
+
+For convenience, we say that the point $(\alpha, m)$ is normal
+if the hypotheses of Lemma \ref{lemma:25} is satisfied. In particular, if $\theta$ is monotone,
+or alternatively if $\theta^{\prime} \geq 0$, then $(\alpha, m)$ is normal.
+Such a $\theta$ must in fact be strictly montone. An important corollary of Lemma \ref{lemma:25}
+is that normality is ``contagious''.
+
+\begin{lemma}\label{lemma:26}
+  Suppose that $(\bar{\alpha}, \bar{m}) \in G \cup N$ is normal.
+  There exists a neighborhood of $(\bar{\alpha}, \bar{m})$ within which all members of $G \cup N$ are normal.
+\end{lemma}
+
+On the other hand, any limit point of a set of normal points is normal.
+
+\begin{proof}
+  Let $\bar{\xi}=\xi(\bar{\alpha})$. Pick a point $\eta \in(\bar{\xi}, b(\bar{\alpha}))$.
+  We first find a neighborhood of $(\bar{\alpha}, \bar{m})$ small enough that
+  for all its members $(\alpha, m), \xi(\alpha)<\eta<b(\alpha)$.
+  This is possible because of the continuity of $\xi$ and $b$ on $\alpha$.
+  By Lemma $25, \theta^{\prime}(r, \bar{\alpha})>0$ for all $r \in[a, \eta]$.
+  The continuity of $\theta$ on $r, \alpha$, and $m$ implies that given any $r$ in this 
+  interval, there exists a neighborhood of $r$ and a neighborhood
+  of $(\bar{\alpha}, \bar{m})$ such that $\theta^{\prime}(r, \alpha, m)>0$
+  for all $r$ and $(\alpha, m)$ in these neighborhoods.
+  A compactness argument gives a neighborhood of $(\alpha, m)$
+  in which $\theta^{\prime}>0$ for all $r \in[\alpha, \eta]$.
+  By Lemma \ref{lemma:25}, all members of $G \cup N$ in this neighborhood must be normal.
+
+  For any sequence of normal points, $\theta^{\prime}>0$ for all $r \in[a, b)$.
+  After taking limit, $\theta^{\prime} \geq 0$ for each point in the
+  domain of the limit function. Thus the limit point must be normal.
+\end{proof}
+
+Ths lemma has some useful repercussions.
+The first is the connectedness property of sets of normal points.
+
+\begin{lemma}\label{lemma:27}
+  Let $C$ be a connected subset of $G \cup N$. If one of its members is normal,
+  then all it members are normal.
+\end{lemma}
+
+\begin{proof}
+  The set of normal points in $C$ is both relatively open and relatively closed in $G \cup N$.
+\end{proof}
+
+\begin{lemma}\label{lemma:28}
+  We fix an $m$. If $\bar{\alpha}$ is known to be normal,
+  then there exists an $\alpha_0 \leq \bar{\alpha}$ such that
+  $\alpha_0 \in G_m,\left(\alpha_0, \infty\right) \subset N_m$,
+  and all $\alpha \geq \alpha_0$ are normal. For some $\varepsilon>0$,
+  the interval $\left(\alpha_0-\varepsilon, \alpha_0\right)$ is disjoint from $G_m \cup N_m$.
+\end{lemma}
+
+\begin{proof}
+  Let $C$ be the largest connected component of $G_m \cup N_m$ containing $\bar{\alpha}$.
+  Since $C$ is a closed set, it has a least element $\alpha_0$.
+  By Lemma \ref{lemma:27}, all members of $C$, in particular $\alpha_0$, are normal.
+  By Lemma \ref{lemma:24}, each member of $C$, in particular $\alpha_0$, is strictly admissible,
+  and so by Lemma \ref{lemma:19}, a right neighborhood of $\alpha_0$ belongs to $N$.
+  By Lemma \ref{lemma:18}, the point $b(\alpha)$ is decreasing in $\alpha$.
+  Thus as we increase $\alpha$ from $\alpha_0$, we remain in $N$.
+  It follows that $\left(\alpha_0, \infty\right) \subset N$.
+  The last assertion in the lemma is a consequence of the fact that
+  a member of a connected component cannot be a limit point of other components.
+\end{proof}
+
+As required in the hypotheses of Lemma \ref{lemma:27}, we need to get hold of some normal points
+before we can start things rolling. In fact, we have many normal points.
+
+\begin{lemma}\label{lemma:29}
+  For any $m \in[0,1]$, all members of $G \cup N$ are normal.
+\end{lemma}
+
+\begin{proof}
+  In the interval $[a, \xi]$,
+  \begin{equation}\label{eq:4.16}
+    \left(-r u^{\prime}(r)\right)^{\prime} = -r u^{\prime \prime}(r)-u^{\prime}(r)
+      = -(1-m) u^{\prime}(r)+r\left(u^p(r)-u(r)\right) \geq 0 .
+  \end{equation}
+  Thus $-r u^{\prime}(r)$ is non-decreasing in $r$ in $[a, \xi]$.
+  Since $u$ is decreasing, the quotient $\theta(r)=-r u^{\prime}(r) / u(r)$ is
+  non-decreasing in $[a,\xi]$. Thus the solution is normal.
+\end{proof}
+
+This lemma yields our main result for the values $m \in[0,1]$.
+\textsc{McLeod} \& \textsc{Serrin} of course have obtained this part for the case 
+$[a, b)=[0, \infty)$ using a different method. We are now ready to make some progress 
+concerning other values of $m$.
+
+\begin{lemma}\label{lemma:30}
+  If all points $m \in[0, \infty)$ are regular, then our main result holds, namely,
+  that all the boundary value problems we are interested in have unique solutions.
+\end{lemma}
+
+\begin{proof}
+  By Lemma \ref{lemma:16}, if all $m$ are regular, the curve of the function $\alpha(m)$
+  is continuous on $[0, \infty)$.
+  The set $G \cup N$ coincides with the set $\{(\alpha, m): \alpha \geq \alpha(m)\}$
+  of points on or above the curve. This is a large, connected piece.
+  By Lemmas \ref{lemma:27} and \ref{lemma:29}, every member of this set is normal.
+  By Lemma \ref{lemma:24}, they are all strictly admissible, and our main result follows.
+\end{proof}
+
+To establish our main result, we assume that the hypothesis of this lemma is not true and derive a contradiction. Thus let us suppose that there is a largest connected interval of regularity $[0, \bar{m})$, $\bar{m}<\infty$.
+
+Let us first dispose of the possibility that $\bar{m}$ is regular. Suppose it is.
+Then by Lemma \ref{lemma:16}, the curve of $\alpha(m)$ is continuous up to the endpoint $\bar{m}$.
+There exists a sequence of irregular points $m_i>\bar{m}$ ($i=1,2,.$),
+such that $\lim_{i \rightarrow \infty} m_i=\bar{m}$.
+For each $i$, let $\alpha_l$ be the smallest member of $G$ on the line $m=m_i$.
+Just as in the proof of Lemma \ref{lemma:16}, it can be shown that the sequence $\alpha_i$ 
+cannot has a subsequence converging to a point in $G$ or $N$. 
+It follows that $\lim _{i \rightarrow \infty} \alpha_i=\alpha(\bar{m})$. 
+Some of these $\alpha_i$ must enter into the normality neighborhood 
+of $(\alpha(\bar{m}),\bar{m})$ constructed in Lemma \ref{lemma:16}. 
+Such $\alpha_i$ are therefore normal. 
+By Lemma \ref{lemma:24}, all $\alpha>\alpha_i$ on the line $m=m_i$ must be in $N$. 
+This contradicts the irregularity of $m_i$ with $\alpha_i$ being the smallest 
+but not the unique member of $G$. It remains to show that the other possibility,
+that $\bar{m}$ is irregular, is also void. It takes several more lemmas.
+First of all, let us see how the sets $G_m, N_m$,
+and $P_m$ look like on the line $L: m=\bar{m}$.
+The curve of $\alpha(m)$ for $m<\bar{m}$ must be continuous up to the endpoint $\bar{m}$,
+lest by Lemma \ref{lemma:16}, the limit point set of the curve on $L$ is a non-degenerate closed interval, 
+a possibility excluded by Lemma \ref{lemma:18}. Let $\alpha_0=\lim _{m \rightarrow \bar{m}} \alpha(m)$.
+By Lemma \ref{lemma:26}, $\alpha_0$ must be normal and, since it belongs to $G$,
+must coincide with the $\alpha_0$ found in Lemma \ref{lemma:28}.
+Hence the part of $L$ above $\alpha_0$ belongs to $N_{\bar{m}}$.
+The set under the graph of $\alpha(m), m<\bar{m}$, shown as the shaded area in Figure 5,
+belongs to $G$. The part of $L$ below $\alpha_0$, shown as the dotted line in the figure, 
+cannot contain any members of the open set $N$, lest every neighborhood of such a member will 
+intrude into the shaded area and therefore cannot be made up of points in $N$ alone.
+
+\begin{lemma}\label{lemma:31}
+  Let $\alpha_0$ be the largest member of $G_{\bar{m}}$ as described above, and $\alpha_1$ be the next member of $G$ smaller than $\alpha_0$. Let $\psi$ denote the largest zero of the function $w\left(r, \alpha_1\right)$. Then for all $\alpha<\alpha_0$ and $\alpha \neq \alpha_1, u(\psi, \alpha)<u\left(\psi, \alpha_1\right)$.
+\end{lemma}
+
+\begin{proof}
+  By Lemma \ref{lemma:28}, $\alpha_0$ cannot be a limit point of smaller members of $G$. Thus $\alpha_1$ exists. The existence of a largest zero of $w$ (i.e., $w$ is non-oscillatory near $\infty$) follows from the fact that $w$ satisfies differential equation (4.2), which is of the form considered in Lemma \ref{lemma:6}. To simplify the notations, we use $u$ to represent the solution corresponding to the parameter $\alpha$ and $u_1$ that corresponding to $\alpha_1$. Suppose for some $\alpha$ the conclusion of the lemma is not true; in other words, we have instead
+  \begin{equation}\label{eq:4.17}
+    u(\psi) \geq u_1(\psi)
+  \end{equation}
+
+  We claim that the two solutions $u$ and $u_1$ cannot intersect at a point 
+  in $(\psi, \infty)$. The arguments we use are similar to those in the proof of Lemma \ref{lemma:19}. 
+  Suppose the solutions do intersect, for the first time at $r=\mu>\psi$.
+  In view of (4.17), $u$ is below $u_1$ in a right neighborhood of the point $\mu$.
+  Suppose the former catches up with the latter at some point beyond $\mu$.
+  Let $\nu$ be the next point where the two solutions intersect again.
+  In the interval $[\mu, v], u \leq u_1$ and the function $z=$ $u_1-u$ satisfies the 
+  differential equation
+  \begin{equation}\label{eq:4.18}
+    z^{\prime \prime}+\frac{m}{r} z^{\prime}+\left(\frac{u_1^p-u^p}{u_1-u}-1\right) z=0.
+  \end{equation}
+  Notice that the coefficient in the last term is smaller than that in equation (4.2) for $w\left(r, \alpha_1\right)$. Therefore, $w$ oscillates more than $z$. Since $z$ is zero at the endpoints of $[\mu, \nu], w$ must have at least one zero in the interval, contradicting the choice of $\psi$ as the last zero of $w$. Thus $u$ must remain below $u_1$ in $(\mu, \infty)$. In this interval, the coefficient of the last term of (4.19) is smaller than that of (4.2). Hence the disconjugacy interval of (4.19) is larger than that of $(4.2)$, which is $(\psi, \infty)$. Since $z$ has a zero within the disconjugacy interval, by Lemma $6, z$ is unbounded, contradicting the fact that $u$ is being trapped between $u_1$ and the $r$-axis.
+
+  Thus we have
+  \begin{equation}\label{eq:4.19}
+    u(r)>u_1(r), \text { for all } r>\psi    
+  \end{equation}
+  In the interval $[\psi, \infty)$, the same function $z$ as defined above satisfies (4.18), but this time the coefficient in the last term is larger than that in (4.2). Since $z$ does
+  not vanish in $[\psi, \infty)$, the disconjugacy interval of $(4.18)$, and hence also that of the less oscillatory $(4.2)$, is a proper superset of $[\psi, \infty)$. Hence, by Lemma \ref{lemma:6},
+  \begin{equation}\label{eq:4.20}
+    \lim _{r \rightarrow \infty} w\left(r, \alpha_1\right)=\pm \infty.  
+  \end{equation}
+  By Lemma \ref{lemma:19}, a right or left neighborhood of $\alpha$ belongs to $N$, contradicting the fact that no point below $\alpha_0$ can be in $N$.
+\end{proof}
+
+\begin{lemma}\label{lemma:32}
+  The solutions $u_0=u\left(r, \alpha_0\right)$ and $u_1=u\left(r, \alpha_1\right)$ cannot 
+  intersect more than once.
+\end{lemma}
+
+\begin{proof}
+  The technique used in the proof of Lemmas 19 and 31 applies.
+  The function $z=u_0-u_1$ satisfies the differential equation
+  \begin{equation}\label{eq:4.21}
+    z^{\prime \prime}+\frac{m}{r} z^{\prime}+\left(\frac{u_0^p-u_1^p}{u_0-u_1}-1\right) z=0,  
+  \end{equation}
+  which oscillates faster than (3.1) for $u\left(r, \alpha_0\right)$ but slower than (4.2)
+  for $w\left(r, \alpha_0\right)$, as long as $u_0>u_1$.
+  Thus $z$ must have a zero in $[a, \infty)$, after the only zero $\tau$
+  of $w\left(r, \alpha_0\right)$. Suppose $z$ has more than one zero,
+  contrary to the conclusion of the Lemma. Then after the second zero,
+  $\tau_2,(4.21)$ again oscillates more slowly than the equation for $w$.
+  Since the disconjugacy interval of the equation for $w$ must be
+  at least $[\tau, \infty)$, that of the "less oscillatory" $(4.21)$
+  must be at least $[\tau_2, \infty)$. By Lemma \ref{lemma:6}, $z$ is therefore unbounded,
+  an obvious contradiction.
+\end{proof}
+
+\begin{lemma}\label{lemma:33}
+  For all $\alpha \in\left(\alpha_1, \alpha_0\right)$, the solutions $u=u(r, \alpha)$ and
+  $u_1=u\left(r, \alpha_1\right)$ cannot intersect more than once in $[a, \psi]$.
+\end{lemma}
+
+\begin{proof}
+  As we vary the parameter $\alpha$ from $\alpha_0$ towards $\alpha_1$,
+  we have a continuous deformation of the solution curve $u$
+  over the closed interval $[a, \psi]$. At the left endpoint $r=a$,
+  the curve $u$ stays clear above that of $u_1$, while at the right endpoint $r-\psi$,
+  the former stays clear below the latter. We start out with one single point of intersection, 
+  when $\alpha=\alpha_0$. The number can increase only if at some point $\alpha$,
+  the curve of $u$ bulges up or down somewhere to touch the curve of $u_1$.
+  But this is impossible because the function $z=u_1-u$ satisfies a ``linear'' second-order 
+  differential equation, namel,y (4.19), and so cannot have a double zero.
+\end{proof}
+
+\begin{lemma}\label{lemma:34}
+  The point $\left(\alpha_1, \bar{m}\right)$ is admissible.
+\end{lemma}
+
+\begin{proof}
+  Since $\psi$ has been chosen to be the last zero of $w\left(r, \alpha_1\right)$,
+  we need to show that $w$ has no other zeros before $\psi$, in order to
+  satisfy the definition of admissibility.
+  
+  Let us first show that there cannot be more than one zero before $\psi$.
+  Suppose this is not the case. Then for a point $\mu$ between the first and second zeros,
+  $w(\mu)=$ $\partial u(u) / \partial \alpha<0$. Likewise for a point $\nu$
+  between the second and third (which may be $\psi$ )
+  zeros $w(\nu)=\partial u(\nu) / \partial \alpha>0$. We can choose an $\alpha>\alpha_1$ 
+  sufficiently close to
+  $\alpha_1$, that $u(\mu)>u_1(\mu)$ but $u(\nu)<u_1(\nu)$. By the Intermediate Value Theorem, 
+  $u$ must intersect $u_1$ at least once in $(a, \mu)$ and another time in $(\nu, \phi)$, 
+  contradicting Lemma \ref{lemma:33}.
+
+  Next we show that $w$ cannot have exactly one zero before $\psi$. Suppose it does;
+  then for $c$ between the two zeros of $w, w(c)<0$. 
+  Hence, for $\alpha<\alpha_0$ but close to $\alpha_0, u(c)>u_1(c)$.
+  It follows that $u$ must intersect $u_1$ at least twice,
+  once in $(a, c)$ and once in $(c, \psi)$. A continuity argument as in the proof of Lemma \ref{lemma:33}
+  shows that all solutions $u$ with $\alpha<\alpha_1$ must intersect $u_1$ at least twice. But 
+  this contradicts the obvious fact that the solution $u(r, 1) \equiv 1$ intersects $u_1$ only 
+  once.
+\end{proof}
+
+
+The last lemma we need turns out to be the most surprising.
+
+\begin{lemma}\label{lemma:35}
+  Admissibility implies normality.
+\end{lemma}
+
+\begin{proof}
+  Suppose the point in question is not normal.
+  Then the graph of $\theta$ intersects the line at height $\beta_0$ more than once
+  in $[\varrho, \xi]$, as shown in Figure 6.
+  Let $\zeta$ be the next point of intersection after $\varrho$.
+  Using Lemma \ref{lemma:5} as in the proof of Lemma \ref{lemma:25},
+  we see that $\theta$ cannot be tangent to the straight line at $\zeta$.
+  We now lower the horizontal line to a height $\beta_1$ when it touches the first point 
+  $\lambda$ to the right of $\zeta$ at which $\theta^{\prime}(\lambda)=0$.
+  Our useful Lemma \ref{lemma:5} shows that $\sigma_{\beta_1}>\lambda$. In the interval $[\zeta,\lambda]$ 
+  the function $\theta$ is strictly monotone, so that the inverse function is continuous.
+  In other words, the point of intersection of the graph with the line $\theta=\beta$ is a 
+  continuous function of $\beta$. As $\beta$ varies from $\beta_1$ to $\beta_0$ a switching of 
+  positions of the point of intersection with the curve in $[\zeta, \lambda]$ and the point 
+  $\sigma$ has taken place. Thus, by continuity, there is a $\beta_2$ at which $\sigma$ 
+  coincides with the point of intersection in $[\zeta, \lambda]$. Let us focus on the line 
+  $\theta=\beta_2$. In the interval $(\varrho, \sigma), \Phi(r)<0$ but $v$ is negative so that 
+  equation (4.11) oscillates less than equation (4.2). This imply that $w$ must have a zero in 
+  between the two zeros, $\varrho$ and $\sigma$, of $v$. Since $\theta$ tend to $\infty$ near 
+  $b$, the graph of $\theta$ must intersect the line one more time after $\sigma$, say at $x$. 
+  In the interval $(\sigma, x), \Phi(r)>0$ but $v$ is positive so that again (4.11) oscillates 
+  less than equation (4.2). As a result, $w$ must have another zero between the two zeros, 
+  $\sigma$ and $x$ of $v$. This contradicts the admissibility of the solution.
+\end{proof}
+
+
+We can now complete the proof of our main theorem by observing that Lemmas 34 and 35
+imply that the point $\alpha_1$ is normal. But by Lemma \ref{lemma:28}, the point $\alpha_0>\alpha_1$
+will be in $N_{\bar{m}}$, obviously contradicting the definition of $\alpha_0$.
