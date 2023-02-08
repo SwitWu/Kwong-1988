@@ -194,17 +194,23 @@ where $m>0$ is a constant and $g$ is continuous with $\lim_{x\to\infty} g(x) = -
 for some $k>0$.
 
 \begin{lemma}\label{lemma:6}
-  Let $(c, \infty)$ be the disconjugacy interval of $(2.15)$. Every solution of (2.15) with a zero in $(c, \infty)$ is unbounded.
+  Let $(c, \infty)$ be the disconjugacy interval of $(2.15)$. 
+  Every solution of (2.15) with a zero in $(c, \infty)$ is unbounded.
   
-  Conversely, if the last zero of an unbounded solution of (2.15) is $\varrho$, then $\varrho$ is an interior point of the disconjugacy interval. In the other words, $\varrho>c$.
+  Conversely, if the last zero of an unbounded solution of (2.15) is $\varrho$,
+  then $\varrho$ is an interior point of the disconjugacy interval. In the other words, $\varrho>c$.
 \end{lemma}
 
 \begin{proof}
-  We have to show that equation (2.15) is non-oscillatory, so that the disconjugacy interval is well defined. Let $\mu$ be so large that $g(x) \leq-k^2$, and $m / x \leq 2 k$ for $x \in[\mu, \infty)$. We compare (2.15) with the equation
+  We have to show that equation (2.15) is non-oscillatory, so that the disconjugacy interval is well defined.
+  Let $\mu$ be so large that $g(x) \leq-k^2$, and $m / x \leq 2 k$ for $x \in[\mu, \infty)$.
+  We compare (2.15) with the equation
   \[
   V^{\prime \prime}+2 k V^{\prime}-k^2 V=0, \quad x \in[\mu, \infty)
   \]
-  using Lemma \ref{lemma:4} in the form of Lemma \ref{lemma:2}. We can conclude that for the solutions $U_1$ and $V_1$ of (2.15) and (2.16), respectively, that satisfy the initial conditions
+  using Lemma \ref{lemma:4} in the form of Lemma \ref{lemma:2}.
+  We can conclude that for the solutions $U_1$ and $V_1$ of (2.15) and (2.16), respectively,
+  that satisfy the initial conditions
   \[
   U_1(\mu)=V_1(\mu)=1, \quad U_1^{\prime}(\mu)=V_1^{\prime}(\mu)=1,
   \]
@@ -212,11 +218,24 @@ for some $k>0$.
   \[
   V_1(x) \leq U_1(x), \quad x>\mu,
   \]
-  holds. Since $V_1$ is non-oscillatory and unbounded, so is $U_1$. If all solutions of (2.15) are unbounded, then our lemma is true. Thus suppose there is a bounded solution $U_2$. Then $U_1$ and $U_2$ are linearly independent, and all other solutions are of the form $U=c_1 U_1+c_2 U_2$, with constants $c_1$ and $c_2$. It follows that any solution that is not a multiple of $U_2$ is unbounded. Let us show that $U_2$ cannot have a zero in the disconjugacy interval, from which the assertion of the lemma follows. Suppose that $U_2$ does have a zero at $\varrho \in(c, \infty)$. Let $U$ be the solution of (2.15) that satisfies the initial conditions, $U(\varrho+1)=U_2(\varrho+1)$ and $U^{\prime}(\varrho)=U_2^{\prime}(\varrho)-\varepsilon$ with $\varepsilon>0$. By taking $\varepsilon$ small enough, we ensure that $U$ has a zero so close to $\varrho$ that it falls in the disconjugacy interval. Thus $U$ cannot have another zero beyond $\varrho+1$. In other words, $U$ remains positive in $[\varrho+1, \infty)$. By Lemma $2, U(x) \leq$ $U_2(x)$, for $x \geq \varrho+1$. It follows that $U$ is bounded, but this contradicts the fact that $U$ is not a multiple of $U_2$.
+  holds. Since $V_1$ is non-oscillatory and unbounded, so is $U_1$. If all solutions of (2.15) are
+  unbounded, then our lemma is true. Thus suppose there is a bounded solution $U_2$.
+  Then $U_1$ and $U_2$ are linearly independent, and all other solutions are of the 
+  form $U=c_1 U_1+c_2 U_2$, with constants $c_1$ and $c_2$. It follows that any solution that is not a 
+  multiple of $U_2$ is unbounded. Let us show that $U_2$ cannot have a zero in the disconjugacy interval, 
+  from which the assertion of the lemma follows. Suppose that $U_2$ does have a zero
+  at $\varrho \in(c, \infty)$. Let $U$ be the solution of (2.15) that satisfies the initial conditions,
+  $U(\varrho+1)=U_2(\varrho+1)$ and $U^{\prime}(\varrho)=U_2^{\prime}(\varrho)-\varepsilon$ with 
+  $\varepsilon>0$. By taking $\varepsilon$ small enough, we ensure that $U$ has a zero so close to 
+  $\varrho$ that it falls in the disconjugacy interval. Thus $U$ cannot have another zero 
+  beyond $\varrho+1$. In other words, $U$ remains positive in $[\varrho+1, \infty)$.
+  By Lemma $2, U(x) \leq$ $U_2(x)$, for $x \geq \varrho+1$. It follows that $U$ is bounded,
+  but this contradicts the fact that $U$ is not a multiple of $U_2$.
 \end{proof}
 
 \begin{lemma}\label{lemma:7}
-  If $U$ is a solution of $(2.15)$ such that $U^{\prime}(x)<0$ for all $x$ sufficiently large, then $-U^{\prime}(x) / U(x) \geq k$ for all $x$ sufficiently large.
+  If $U$ is a solution of \eqref{eq:2.15} such that $U^{\prime}(x)<0$ for all $x$ sufficiently large,
+  then $-U^{\prime}(x) / U(x) \geq k$ for all $x$ sufficiently large.
 \end{lemma}
 
 \begin{proof}
@@ -224,5 +243,7 @@ for some $k>0$.
   \[
   R^{\prime}=R^2-\frac{m}{x} R+g(x)<R^2+g(x) .
   \]
-  If $R(x)<k$ for some large $x$, for which $g(x)$ is close to its limit $-2 k^2$, then $R^{\prime}$ will remain strictly negative, eventually causing $R$ to change sign. This contradiction proves the lemma.
+  If $R(x)<k$ for some large $x$, for which $g(x)$ is close to its limit $-2 k^2$,
+  then $R^{\prime}$ will remain strictly negative, eventually causing $R$ to change sign.
+  This contradiction proves the lemma.
 \end{proof}

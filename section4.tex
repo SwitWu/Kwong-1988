@@ -83,7 +83,7 @@ The following lemma complements Lemma \ref{lemma:18}.
 
 \begin{proof}
   Let $\tau$ be the largest zero of $w$ in $[a, b)$.
-  By Lemma \ref{lemma:6}, the disconjugacy interval $(c, \infty)$ of equation (4.2) contains $\tau$. 
+  By Lemma \ref{lemma:6}, the disconjugacy interval $(c, \infty)$ of equation~\eqref{eq:4.2} contains $\tau$. 
   Suppose first that $w$ is negative after $\tau$. Take a point $\zeta \in(c, \tau)$ and a 
   point $\lambda \in(\tau, \infty)$. Since $w(\zeta)>0$ and $w(\lambda)<0$, for $\varepsilon>0$ 
   small enough, $u(\zeta, \hat{\alpha})>w(\alpha)$, and $u(\lambda, \hat{\alpha})<w(\alpha)$, 
@@ -100,30 +100,38 @@ The following lemma complements Lemma \ref{lemma:18}.
   \begin{equation}\label{eq:4.8}
     z^{\prime \prime}+\frac{m}{r} z^{\prime}+\left(\frac{u^p-\hat{u}^p}{u-\hat{u}}-1\right) z=0.    
   \end{equation}
-  Observe that the coefficient of the last term is less than that in (4.2).
-  Hence $z$ oscillates less than the solutions of (4.2). But the disconjugacy interval of (4.2) 
+  Observe that the coefficient of the last term is less than that in \eqref{eq:4.2}.
+  Hence $z$ oscillates less than the solutions of \eqref{eq:4.2}.
+  But the disconjugacy interval of \eqref{eq:4.2}
   being $(c, \infty)$ means that the solutions of $(4.2)$ cannot have two zeros in the interval 
   $[\chi, \eta]$. It follows that the less oscillatory $z$ cannot have two zeros in the same 
   interval, contradicting the assumption that $z(\chi)=z(\eta)=0$. Thus $\hat{u}$ remains below 
-  $u$ throughout $(\chi, \infty)$. Then the coefficient of $(4.8)$ is less than that of $(4.2)$ 
+  $u$ throughout $(\chi, \infty)$.
+  Then the coefficient of \eqref{eq:4.8} is less than that of \eqref{eq:4.2}
   in the whole interval $(\chi, \infty)$, implying that $z$ is less oscillatory than the 
-  solutions of (4.2) in $(\chi, \infty)$. Since $\chi$ is in the disconjugacy interval
-  of $(4.2)$, by Lemma \ref{lemma:6} , a solution of (4.2) that vanishes at $\chi$ must be unbounded.
-  By Lemma \ref{lemma:2}, the less oscillatory $z$ must also be unbounded. This contradicts the fact that 
+  solutions of \eqref{eq:4.2} in $(\chi, \infty)$. Since $\chi$ is in the disconjugacy interval
+  of \eqref{eq:4.2}, by Lemma \ref{lemma:6},
+  a solution of \eqref{eq:4.2} that vanishes at $\chi$ must be unbounded.
+  By Lemma \ref{lemma:2}, the less oscillatory $z$ must also be unbounded.
+  This contradicts the fact that 
   $\hat{u}(r)<u(r) \rightarrow 0$ as $r \rightarrow \infty$, unless $\hat{u}$ intersects the 
   $r$-axis. Thus $u(r)=u(r, \bar{\alpha})$ belongs to $N$ for all $\bar{\alpha}$
   in $(\alpha, \alpha+\varepsilon)$ or $(\alpha-\varepsilon, \alpha)$ as asserted.
 \end{proof}
 
 Now if we can show that all points $(\alpha, m)$ in the union $G \cup N$ are strictly 
-admissible, then we have uniqueness for the boundary value problems (3.1), (3.2), (3.3)
-and $(3.1),(3.2),(3.4)$. Let us follow the development as $\alpha$ increases from 0.
-By Lemma \ref{lemma:8}, we first have solutions in $P$. As the first boundary point $\alpha_m$ of $G$
-is reached, we have a solution in $G$. By Lemma \ref{lemma:19}, a right neighborhood of $\alpha_m$
+admissible, then we have uniqueness for the boundary value problems
+\eqref{eq:3.1}, \eqref{eq:3.2}, \eqref{eq:3.3}
+and \eqref{eq:3.1}, \eqref{eq:3.2}, \eqref{eq:3.4}.
+Let us follow the development as $\alpha$ increases from 0.
+By Lemma~\ref{lemma:8}, we first have solutions in $P$.
+As the first boundary point $\alpha_m$ of $G$ is reached,
+we have a solution in $G$. By Lemma \ref{lemma:19}, a right neighborhood of $\alpha_m$
 belongs to $N$. By Lemma \ref{lemma:18}, as $\alpha$ continues to increase from $\alpha_m$,
 the point $b(\alpha)$ moves strictly towards the lefthand side without retracing
 any previous locations. Thus all $\alpha>\alpha_m$ belongs to $N$, and no two values of
-$\alpha$ can solve the boundary value problem (3.1), (3.2), (3.3) for the same $b$.
+$\alpha$ can solve the boundary value problem
+\eqref{eq:3.1}, \eqref{eq:3.2}, \eqref{eq:3.3} for the same $b$.
 
 The desired claim (that all members of $G \cup N$ are strictly admissible), although valid,
 is by no means easy to verify.
@@ -141,7 +149,7 @@ for a solution $u \in G \cup N$.
 
 \begin{proof}
   The last assertion for the case $b=\infty$ is the only non-trivial one.
-  By Lemma $7,-r u^{\prime}(r) / u(r)>k r$ for large $r$. The conclusion then follows.
+  By Lemma 7, $-r u^{\prime}(r) / u(r)>k r$ for large $r$. The conclusion then follows.
 \end{proof}
 
 We draw a horizontal line of height $\beta \geq 0$ above the $r$-axis. It can interact with the graph of $\theta$ in any one of the ways depicted in Figures 2--4.
@@ -175,7 +183,7 @@ Let us define
 \begin{equation}\label{eq:4.12}
   \phi(u)=-2\left(u^p-u\right)+\beta(p-1) u^p .  
 \end{equation}
-The right-hand side of (4.11) is then the following composite function
+The right-hand side of \eqref{eq:4.11} is then the following composite function
 \[\Phi(r)=\phi(u(r)).\]
 
 \begin{lemma}\label{lemma:22}
@@ -194,7 +202,7 @@ The right-hand side of (4.11) is then the following composite function
   for which $u(\sigma)=u_0$ in case $u_0<\alpha$ and is $a$ otherwise.
   The continuity of $\sigma$ follows from the continuity of $u_0$ on $\beta$
   and the continuity of the inverse of $u$. Finally, the monotonicity of $\sigma$
-  follows from the positivity of the term containing $\beta$ in (4.12).
+  follows from the positivity of the term containing $\beta$ in \eqref{eq:4.12}.
 \end{proof}
 
 Let us follow the movement of $\varrho$ and $\sigma$ as $\beta$ increases.
@@ -240,16 +248,17 @@ We answer this question with the following lemma.
   The hypotheses imply that $v=v_{\beta_0}$ has exactly one zero in $(a, b)$.
   Note that in case $b \neq \infty, v(b)=b_0 u^{\prime}(b)<0$.
   Thus $v$ has exactly one zero in $[a, b]$. In $(a, \varrho)$,
-  $v$ is positive and satisfies inequality (4.14), while $w$ satisfies the equation (4.2).
+  $v$ is positive and satisfies inequality \eqref{eq:4.14},
+  while $w$ satisfies the equation \eqref{eq:4.2}.
   At $a$,
   \[
     v^{\prime}(a) = \left(1+\beta_0\right) u^{\prime}(a)+\beta_0 a u^{\prime \prime}(a)
       = \beta_0 a u^{\prime \prime}(a) < 0,
   \]
   so that the comparison conditions for the initial point is verified.
-  By Lemma 1 , $v$ oscillates faster than $w$, so that $\varrho$, the first zero of $v$
-  is less than $\tau$, the first zero of $w$. In the interval $(\tau, b)$,
-  $v$ is negative and satisfies the reverse differential inequality
+  By Lemma~\ref{lemma:1} , $v$ oscillates faster than $w$, so that $\varrho$,
+  the first zero of $v$ is less than $\tau$, the first zero of $w$.
+  In the interval $(\tau, b)$, $v$ is negative and satisfies the reverse differential inequality
   \begin{equation}\label{eq:4.15}
     v^{\prime \prime}+\frac{m}{r} v^{\prime}+\left(p u^{p-1}-1\right) v \geq 0.
   \end{equation}
@@ -257,8 +266,8 @@ We answer this question with the following lemma.
   has no more zeros beyond $\tau$, so $w$ cannot have any zero beyond $\tau$ either.
   In case $b<\infty$, we conclude that $w(b) \neq 0$, and so $(\alpha, m)$
   is strictly admissible. When $b=\infty$, using Lemma \ref{lemma:3},
-  we see that the disconjugacy interval for (4.2) is a proper superset of $(\tau, b)$.
-  By Lemma \ref{lemma:6}, $w$ is thus unbounded, and $(\alpha, m)$ is strictly admissible.
+  we see that the disconjugacy interval for \eqref{eq:4.2} is a proper superset of $(\tau, b)$.
+  By Lemma~\ref{lemma:6}, $w$ is thus unbounded, and $(\alpha, m)$ is strictly admissible.
 \end{proof}
 
 Our next lemma tells us that we can even start out with less and yet end up
@@ -277,7 +286,7 @@ with more than we expect.
   We draw a horizontal line of height $\beta$ to touch the lowest of all such minima,
   say at the point $c \in(\xi, b)$.
   The corresponding $v_\beta$ is then negative in $(c, b)$ and has a double zero at $r=c$.
-  In $[\xi, b), \Phi(r) \geq 0$, so $v_\beta$ satisfies differential inequality (4.15).
+  In $[\xi, b), \Phi(r) \geq 0$, so $v_\beta$ satisfies differential inequality \eqref{eq:4.15}.
   This contradicts Lemma \ref{lemma:5}.
   
   Together with the hypotheses, we now have $\theta(r) \geq \beta_0$
@@ -312,14 +321,14 @@ On the other hand, any limit point of a set of normal points is normal.
   We first find a neighborhood of $(\bar{\alpha}, \bar{m})$ small enough that
   for all its members $(\alpha, m), \xi(\alpha)<\eta<b(\alpha)$.
   This is possible because of the continuity of $\xi$ and $b$ on $\alpha$.
-  By Lemma $25, \theta^{\prime}(r, \bar{\alpha})>0$ for all $r \in[a, \eta]$.
+  By Lemma~\ref{lemma:25}, $\theta^{\prime}(r, \bar{\alpha})>0$ for all $r \in[a, \eta]$.
   The continuity of $\theta$ on $r, \alpha$, and $m$ implies that given any $r$ in this 
   interval, there exists a neighborhood of $r$ and a neighborhood
   of $(\bar{\alpha}, \bar{m})$ such that $\theta^{\prime}(r, \alpha, m)>0$
   for all $r$ and $(\alpha, m)$ in these neighborhoods.
   A compactness argument gives a neighborhood of $(\alpha, m)$
   in which $\theta^{\prime}>0$ for all $r \in[\alpha, \eta]$.
-  By Lemma \ref{lemma:25}, all members of $G \cup N$ in this neighborhood must be normal.
+  By Lemma~\ref{lemma:25}, all members of $G \cup N$ in this neighborhood must be normal.
 
   For any sequence of normal points, $\theta^{\prime}>0$ for all $r \in[a, b)$.
   After taking limit, $\theta^{\prime} \geq 0$ for each point in the
@@ -447,14 +456,27 @@ intrude into the shaded area and therefore cannot be made up of points in $N$ al
   \begin{equation}\label{eq:4.18}
     z^{\prime \prime}+\frac{m}{r} z^{\prime}+\left(\frac{u_1^p-u^p}{u_1-u}-1\right) z=0.
   \end{equation}
-  Notice that the coefficient in the last term is smaller than that in equation (4.2) for $w\left(r, \alpha_1\right)$. Therefore, $w$ oscillates more than $z$. Since $z$ is zero at the endpoints of $[\mu, \nu], w$ must have at least one zero in the interval, contradicting the choice of $\psi$ as the last zero of $w$. Thus $u$ must remain below $u_1$ in $(\mu, \infty)$. In this interval, the coefficient of the last term of (4.19) is smaller than that of (4.2). Hence the disconjugacy interval of (4.19) is larger than that of $(4.2)$, which is $(\psi, \infty)$. Since $z$ has a zero within the disconjugacy interval, by Lemma $6, z$ is unbounded, contradicting the fact that $u$ is being trapped between $u_1$ and the $r$-axis.
+  Notice that the coefficient in the last term is smaller than that in equation \eqref{eq:4.2}
+  for $w\left(r, \alpha_1\right)$. Therefore, $w$ oscillates more than $z$.
+  Since $z$ is zero at the endpoints of $[\mu, \nu]$, $w$ must have at least one zero in the 
+  interval, contradicting the choice of $\psi$ as the last zero of $w$.
+  Thus $u$ must remain below $u_1$ in $(\mu, \infty)$. In this interval,
+  the coefficient of the last term of \eqref{eq:4.19} is smaller than that of \eqref{eq:4.2}.
+  Hence the disconjugacy interval of \eqref{eq:4.19} is larger than that of \eqref{eq:4.2},
+  which is $(\psi, \infty)$. Since $z$ has a zero within the disconjugacy interval,
+  by Lemma~\ref{lemma:6}, $z$ is unbounded, contradicting the fact that $u$ is being trapped 
+  between $u_1$ and the $r$-axis.
 
   Thus we have
   \begin{equation}\label{eq:4.19}
     u(r)>u_1(r), \text { for all } r>\psi    
   \end{equation}
-  In the interval $[\psi, \infty)$, the same function $z$ as defined above satisfies (4.18), but this time the coefficient in the last term is larger than that in (4.2). Since $z$ does
-  not vanish in $[\psi, \infty)$, the disconjugacy interval of $(4.18)$, and hence also that of the less oscillatory $(4.2)$, is a proper superset of $[\psi, \infty)$. Hence, by Lemma \ref{lemma:6},
+  In the interval $[\psi, \infty)$, the same function $z$ as defined above satisfies
+  \eqref{eq:4.18}, but this time the coefficient in the last term is larger than 
+  that in \eqref{eq:4.2}. Since $z$ does not vanish in $[\psi, \infty)$, 
+  the disconjugacy interval of \eqref{eq:4.18}, and hence also that of the less 
+  oscillatory \eqref{eq:4.2}, is a proper superset of $[\psi, \infty)$.
+  Hence, by Lemma \ref{lemma:6},
   \begin{equation}\label{eq:4.20}
     \lim _{r \rightarrow \infty} w\left(r, \alpha_1\right)=\pm \infty.  
   \end{equation}
@@ -467,19 +489,19 @@ intrude into the shaded area and therefore cannot be made up of points in $N$ al
 \end{lemma}
 
 \begin{proof}
-  The technique used in the proof of Lemmas 19 and 31 applies.
+  The technique used in the proof of Lemmas \ref{lemma:19} and \ref{lemma:31} applies.
   The function $z=u_0-u_1$ satisfies the differential equation
   \begin{equation}\label{eq:4.21}
     z^{\prime \prime}+\frac{m}{r} z^{\prime}+\left(\frac{u_0^p-u_1^p}{u_0-u_1}-1\right) z=0,  
   \end{equation}
-  which oscillates faster than (3.1) for $u\left(r, \alpha_0\right)$ but slower than (4.2)
-  for $w\left(r, \alpha_0\right)$, as long as $u_0>u_1$.
+  which oscillates faster than \eqref{eq:3.1} for $u\left(r, \alpha_0\right)$
+  but slower than \eqref{eq:4.2} for $w\left(r, \alpha_0\right)$, as long as $u_0>u_1$.
   Thus $z$ must have a zero in $[a, \infty)$, after the only zero $\tau$
   of $w\left(r, \alpha_0\right)$. Suppose $z$ has more than one zero,
   contrary to the conclusion of the Lemma. Then after the second zero,
-  $\tau_2,(4.21)$ again oscillates more slowly than the equation for $w$.
+  $\tau_2$, \eqref{eq:4.21} again oscillates more slowly than the equation for $w$.
   Since the disconjugacy interval of the equation for $w$ must be
-  at least $[\tau, \infty)$, that of the "less oscillatory" $(4.21)$
+  at least $[\tau, \infty)$, that of the "less oscillatory" \eqref{eq:4.21}
   must be at least $[\tau_2, \infty)$. By Lemma \ref{lemma:6}, $z$ is therefore unbounded,
   an obvious contradiction.
 \end{proof}
@@ -524,7 +546,8 @@ intrude into the shaded area and therefore cannot be made up of points in $N$ al
   then for $c$ between the two zeros of $w, w(c)<0$. 
   Hence, for $\alpha<\alpha_0$ but close to $\alpha_0, u(c)>u_1(c)$.
   It follows that $u$ must intersect $u_1$ at least twice,
-  once in $(a, c)$ and once in $(c, \psi)$. A continuity argument as in the proof of Lemma \ref{lemma:33}
+  once in $(a, c)$ and once in $(c, \psi)$. A continuity argument as
+  in the proof of Lemma \ref{lemma:33}
   shows that all solutions $u$ with $\alpha<\alpha_1$ must intersect $u_1$ at least twice. But 
   this contradicts the obvious fact that the solution $u(r, 1) \equiv 1$ intersects $u_1$ only 
   once.
@@ -554,15 +577,18 @@ The last lemma we need turns out to be the most surprising.
   $\sigma$ has taken place. Thus, by continuity, there is a $\beta_2$ at which $\sigma$ 
   coincides with the point of intersection in $[\zeta, \lambda]$. Let us focus on the line 
   $\theta=\beta_2$. In the interval $(\varrho, \sigma), \Phi(r)<0$ but $v$ is negative so that 
-  equation (4.11) oscillates less than equation (4.2). This imply that $w$ must have a zero in 
-  between the two zeros, $\varrho$ and $\sigma$, of $v$. Since $\theta$ tend to $\infty$ near 
-  $b$, the graph of $\theta$ must intersect the line one more time after $\sigma$, say at $x$. 
-  In the interval $(\sigma, x), \Phi(r)>0$ but $v$ is positive so that again (4.11) oscillates 
-  less than equation (4.2). As a result, $w$ must have another zero between the two zeros, 
+  equation \eqref{eq:4.11} oscillates less than equation \eqref{eq:4.2}.
+  This imply that $w$ must have a zero in between the two zeros, $\varrho$ and $\sigma$, of $v$. 
+  Since $\theta$ tend to $\infty$ near $b$, the graph of $\theta$ must intersect the line 
+  one more time after $\sigma$, say at $x$. 
+  In the interval $(\sigma, x), \Phi(r)>0$ but $v$ is positive so that again \eqref{eq:4.11}
+  oscillates less than equation \eqref{eq:4.2}.
+  As a result, $w$ must have another zero between the two zeros, 
   $\sigma$ and $x$ of $v$. This contradicts the admissibility of the solution.
 \end{proof}
 
 
-We can now complete the proof of our main theorem by observing that Lemmas 34 and 35
-imply that the point $\alpha_1$ is normal. But by Lemma \ref{lemma:28}, the point $\alpha_0>\alpha_1$
+We can now complete the proof of our main theorem by observing that Lemmas \ref{lemma:34} and
+\ref{lemma:35} imply that the point $\alpha_1$ is normal.
+But by Lemma \ref{lemma:28}, the point $\alpha_0>\alpha_1$
 will be in $N_{\bar{m}}$, obviously contradicting the definition of $\alpha_0$.

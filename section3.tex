@@ -10,7 +10,7 @@ boundary value problems:
   u^{\prime \prime}(r)+\frac{m}{r} u^{\prime}(r)+u^p-u & =0, \quad u(r)>0,
     \quad r \in(a, b), \label{eq:3.1} \\
   u^{\prime}(a) & = 0, \label{eq:3.2} \\
-  u(b) & = 0
+  u(b) & = 0 \label{eq:3.3}
 \end{align}
 
 or
@@ -19,16 +19,17 @@ or
   \lim _{r \rightarrow \infty} u(x)=0 \quad \text { if } b=\infty .
 \end{equation}
 
-These come from corresponding boundary value problems for the semilinear equation 
-(1.1) on an annulus $a<|x|<b$, with the Neumann condition on the ball $|x|=a$ and 
-the Dirichlet condition on the outer ball $|x|=b$. The constant $m$ is one less 
-than the dimension $n$ of the Euclidean space $\mathbb{R}^n$ in which (1.1) holds.
+These come from corresponding boundary value problems for the semilinear 
+equation~\eqref{eq:1.1} on an annulus $a<|x|<b$, with the Neumann condition
+on the ball $|x|=a$ and the Dirichlet condition on the outer ball $|x|=b$.
+The constant $m$ is one less than the dimension $n$ of the Euclidean space 
+$\mathbb{R}^n$ in which \eqref{eq:1.1} holds.
 In this section, we take $m$ to be any positive constant, not necessarily integral.
 Our main theorem asserts the uniqueness of the solution to any of the above boundary
 value problems. Since the question of existence has been answered in the affirmative,
 a unique solution always exists.
 
-In this section we discuss the classification of solutions of (3.1). 
+In this section we discuss the classification of solutions of \eqref{eq:3.1}. 
 Some of the lemmas stated here are well known, but we prefer to give complete proofs.
 The proof of the main theorem is complicated enough that it is perhaps better to make
 the paper as self-contained as possible. Trying to adopt notations from other sources
@@ -36,7 +37,7 @@ would only add to the confusion.
 
 Following \textsc{Kolodner} and \textsc{Coffman}, instead of considering directly the
 boundary value problems, we look at $u$ as the solution of an initial value problem, 
-(3.1), together with the initial conditions
+\eqref{eq:3.1}, together with the initial conditions
 \begin{equation}\label{eq:3.5}
   u(a)=\alpha>0, \quad u^{\prime}(a)=0.
 \end{equation}
@@ -80,7 +81,7 @@ appropriate set. Also whenever there is no danger of confusion, we suppress the 
 mention of the variables $\alpha$ and $m$ in functions such as $u$ and $b$.
 From the classical theory of ordinary differential equations, we know that,
 in any compact $r$-interval, solutions
-of (3.1)--(3.5) depend continuously on the parameters $\alpha$ and $m$.
+of \eqref{eq:3.1}--\eqref{eq:3.5} depend continuously on the parameters $\alpha$ and $m$.
 
 As is well known, we can obtain a lot of information about the solutions
 from the Energy or Lyapunov function
@@ -93,7 +94,10 @@ finite constant $E(\infty)$ as $r \rightarrow \infty$. It follows that all solut
 bounded.
 
 \begin{lemma}\label{lemma:8}
-  If $E(a)=\frac{\alpha^{p+1}}{p+1}-\frac{\alpha^2}{2} \leq 0$, then $(\alpha, m) \in P \quad$ for any $m$. In other words, $(0, \gamma) \times[0, \infty) \subset P$, where $\gamma=\left(\frac{p+1}{2}\right)^{1 /(p-1)}$.
+  If $E(a)=\frac{\alpha^{p+1}}{p+1}-\frac{\alpha^2}{2} \leq 0$,
+  then $(\alpha, m) \in P \quad$ for any $m$.
+  In other words, $(0, \gamma) \times[0, \infty) \subset P$,
+  where $\gamma=\left(\frac{p+1}{2}\right)^{1 /(p-1)}$.
 \end{lemma}
 
 \begin{proof}
@@ -156,7 +160,7 @@ bounded.
   The same arguments as above show that $u$ cannot be monotone increasing
   in $\left(r_1, \infty\right)$.
   Repeating the arguments then gives two infinite sequences of critical points as asserted.
-  The strict inequalities in (3.7) and (3.8) are due to the fact
+  The strict inequalities in \eqref{eq:3.7} and \eqref{eq:3.8} are due to the fact
   that $E^{\prime}=-u^{\prime 2} / 2$ cannot vanish identically
   in any subinterval of $(a, b)$.
 \end{proof}
@@ -181,8 +185,8 @@ Lemma \ref{lemma:9} has the following corollary
 \end{proof}
 
 The derivative $u^{\prime}(b)$ cannot vanish at the endpoint $b$,
-because this contradicts the uniqueness of initial value problem for (3.1);
-the trivial solution is the only solution of (3.1) that can vanish at $b$
+because this contradicts the uniqueness of initial value problem for \eqref{eq:3.1};
+the trivial solution is the only solution of \eqref{eq:3.1} that can vanish at $b$
 with a double zero.
 
 
@@ -210,7 +214,8 @@ The boundary points of $N$ or $P$ belong to $G$.
 The following lemma is a straightforward consequence of Lemmas 8 and 13.
 
 \begin{lemma}\label{lemma:14}
-  For a fixed m, the boundary value problem (3.1)-(3.4) has a unique solution if and only if
+  For a fixed m, the boundary value problem \eqref{eq:3.1}--\eqref{eq:3.4}
+  has a unique solution if and only if
   the sets $P_m$ and $N_m$ are both open intervals of the form $\left(0, \alpha_m\right)$ and
   $\left(\alpha_m, \infty\right)$, respectively,
   with one single common endpoint $\alpha_m \in G_m$.
